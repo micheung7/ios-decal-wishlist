@@ -1,5 +1,5 @@
 //
-//  ItemVC.swift
+//  FriendFeedVC.swift
 //  PriceTracker
 //
 //  Created by Michelle Cheung on 4/4/18.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ItemVC: UIViewController {
-
+class FriendFeedVC: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

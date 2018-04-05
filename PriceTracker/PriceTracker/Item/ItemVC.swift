@@ -1,5 +1,5 @@
 //
-//  ProfileVC.swift
+//  ItemVC.swift
 //  PriceTracker
 //
 //  Created by Michelle Cheung on 4/4/18.
@@ -8,8 +8,13 @@
 
 import UIKit
 
-class ProfileVC: UIViewController {
-
+class ItemVC: UIViewController {
+    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var sizeLabel: UILabel!
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

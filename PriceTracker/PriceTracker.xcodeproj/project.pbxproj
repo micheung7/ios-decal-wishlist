@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D8C600020763060003668A1 /* FriendFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C5FFF20763060003668A1 /* FriendFeedTableViewCell.swift */; };
+		9D8C600320763174003668A1 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C600220763174003668A1 /* UserTableViewCell.swift */; };
+		9D8C600620763329003668A1 /* PeopleSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C600520763329003668A1 /* PeopleSearchTableViewCell.swift */; };
+		9D8C6009207634B8003668A1 /* UserCopyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C6008207634B8003668A1 /* UserCopyTableViewCell.swift */; };
+		9D8C600B207635D5003668A1 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C600A207635D5003668A1 /* ProfileTableViewCell.swift */; };
 		9DAD28FD2075BEAE00C90CCE /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD28FC2075BEAE00C90CCE /* SignUpVC.swift */; };
 		9DAD28FF2075BF0400C90CCE /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD28FE2075BF0400C90CCE /* LogInVC.swift */; };
 		9DAD29012075BF8B00C90CCE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD29002075BF8B00C90CCE /* TabBarController.swift */; };
@@ -47,6 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D8C5FFF20763060003668A1 /* FriendFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFeedTableViewCell.swift; sourceTree = "<group>"; };
+		9D8C600220763174003668A1 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		9D8C600520763329003668A1 /* PeopleSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleSearchTableViewCell.swift; sourceTree = "<group>"; };
+		9D8C6008207634B8003668A1 /* UserCopyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCopyTableViewCell.swift; sourceTree = "<group>"; };
+		9D8C600A207635D5003668A1 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9DAD28FC2075BEAE00C90CCE /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		9DAD28FE2075BF0400C90CCE /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		9DAD29002075BF8B00C90CCE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -100,6 +110,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D6E7D6D20763A0D002EA206 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD29002075BF8B00C90CCE /* TabBarController.swift */,
+			);
+			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		9D8C6001207630A2003668A1 /* Friend Feed */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD29062075C06C00C90CCE /* FriendFeedVC.swift */,
+				9D8C5FFF20763060003668A1 /* FriendFeedTableViewCell.swift */,
+			);
+			path = "Friend Feed";
+			sourceTree = "<group>";
+		};
+		9D8C60042076327B003668A1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD29082075C09F00C90CCE /* UserVC.swift */,
+				9D8C600220763174003668A1 /* UserTableViewCell.swift */,
+				9DAD290E2075C28D00C90CCE /* UserCopyVC.swift */,
+				9D8C6008207634B8003668A1 /* UserCopyTableViewCell.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		9D8C6007207633B1003668A1 /* People Search */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD290C2075C26C00C90CCE /* PeopleSearchVC.swift */,
+				9D8C600520763329003668A1 /* PeopleSearchTableViewCell.swift */,
+			);
+			path = "People Search";
+			sourceTree = "<group>";
+		};
+		9D8C600C20763616003668A1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD29122075C31200C90CCE /* ProfileVC.swift */,
+				9D8C600A207635D5003668A1 /* ProfileTableViewCell.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		9D8C600D20763636003668A1 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD290A2075C18000C90CCE /* ItemVC.swift */,
+				9DAD29102075C2A700C90CCE /* ItemCopyVC.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		9D8C600E20763843003668A1 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				9DAD29162075C35300C90CCE /* AddEntryVC.swift */,
+				9DAD29142075C32E00C90CCE /* ItemEditVC.swift */,
+				9DAD29182075C42000C90CCE /* UserEditVC.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
 		9DAD29022075BF9E00C90CCE /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,14 +182,6 @@
 				9DAD28FC2075BEAE00C90CCE /* SignUpVC.swift */,
 			);
 			path = Authentication;
-			sourceTree = "<group>";
-		};
-		9DAD29052075BFD800C90CCE /* Tab Bar */ = {
-			isa = PBXGroup;
-			children = (
-				9DAD29002075BF8B00C90CCE /* TabBarController.swift */,
-			);
-			path = "Tab Bar";
 			sourceTree = "<group>";
 		};
 		A1C3DBCA206AE45A00CC213C = {
@@ -143,21 +210,17 @@
 				A1C3DBD6206AE45A00CC213C /* AppDelegate.swift */,
 				A1C3DBD8206AE45A00CC213C /* ViewController.swift */,
 				A1C3DBDA206AE45A00CC213C /* Main.storyboard */,
-				A1C3DBDD206AE45A00CC213C /* Assets.xcassets */,
 				A1C3DBDF206AE45A00CC213C /* LaunchScreen.storyboard */,
+				A1C3DBDD206AE45A00CC213C /* Assets.xcassets */,
 				A1C3DBE2206AE45A00CC213C /* Info.plist */,
 				9DAD29022075BF9E00C90CCE /* Authentication */,
-				9DAD29052075BFD800C90CCE /* Tab Bar */,
-				9DAD29062075C06C00C90CCE /* FriendFeedVC.swift */,
-				9DAD29082075C09F00C90CCE /* UserVC.swift */,
-				9DAD290A2075C18000C90CCE /* ItemVC.swift */,
-				9DAD290C2075C26C00C90CCE /* PeopleSearchVC.swift */,
-				9DAD290E2075C28D00C90CCE /* UserCopyVC.swift */,
-				9DAD29102075C2A700C90CCE /* ItemCopyVC.swift */,
-				9DAD29122075C31200C90CCE /* ProfileVC.swift */,
-				9DAD29162075C35300C90CCE /* AddEntryVC.swift */,
-				9DAD29142075C32E00C90CCE /* ItemEditVC.swift */,
-				9DAD29182075C42000C90CCE /* UserEditVC.swift */,
+				9D6E7D6D20763A0D002EA206 /* Tab Bar */,
+				9D8C6001207630A2003668A1 /* Friend Feed */,
+				9D8C60042076327B003668A1 /* User */,
+				9D8C600D20763636003668A1 /* Item */,
+				9D8C6007207633B1003668A1 /* People Search */,
+				9D8C600C20763616003668A1 /* Profile */,
+				9D8C600E20763843003668A1 /* Entry */,
 			);
 			path = PriceTracker;
 			sourceTree = "<group>";
@@ -320,14 +383,19 @@
 				9DAD29172075C35300C90CCE /* AddEntryVC.swift in Sources */,
 				A1C3DBD9206AE45A00CC213C /* ViewController.swift in Sources */,
 				9DAD28FD2075BEAE00C90CCE /* SignUpVC.swift in Sources */,
+				9D8C600620763329003668A1 /* PeopleSearchTableViewCell.swift in Sources */,
 				9DAD290F2075C28D00C90CCE /* UserCopyVC.swift in Sources */,
+				9D8C600020763060003668A1 /* FriendFeedTableViewCell.swift in Sources */,
 				9DAD28FF2075BF0400C90CCE /* LogInVC.swift in Sources */,
 				9DAD29012075BF8B00C90CCE /* TabBarController.swift in Sources */,
 				9DAD29152075C32E00C90CCE /* ItemEditVC.swift in Sources */,
 				9DAD290D2075C26C00C90CCE /* PeopleSearchVC.swift in Sources */,
+				9D8C600B207635D5003668A1 /* ProfileTableViewCell.swift in Sources */,
 				9DAD29192075C42000C90CCE /* UserEditVC.swift in Sources */,
 				9DAD29112075C2A700C90CCE /* ItemCopyVC.swift in Sources */,
 				A1C3DBD7206AE45A00CC213C /* AppDelegate.swift in Sources */,
+				9D8C600320763174003668A1 /* UserTableViewCell.swift in Sources */,
+				9D8C6009207634B8003668A1 /* UserCopyTableViewCell.swift in Sources */,
 				9DAD290B2075C18000C90CCE /* ItemVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

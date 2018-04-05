@@ -194,6 +194,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tc2-cB-y8c"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="gyk-2s-2JZ" id="FC5-uW-nmE"/>
+                        <outlet property="emailTextField" destination="nH6-Ed-lxy" id="uke-Kc-tMc"/>
+                        <outlet property="hasAccountButton" destination="WKq-ZC-qfk" id="dEP-fU-pRV"/>
+                        <outlet property="logoImage" destination="Peb-df-8qG" id="iOU-5u-K8P"/>
+                        <outlet property="passwordTextField" destination="Lw9-ue-VNq" id="RKz-je-Z2i"/>
+                        <outlet property="signUpButton" destination="Phs-Gb-3g2" id="YVE-fV-i7R"/>
+                        <outlet property="signUpLabel" destination="YNk-J6-K3f" id="ScA-lz-P8J"/>
+                        <outlet property="usernameTextField" destination="3qG-T5-mJ7" id="1yL-7n-lN2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhg-h6-vzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,7 +242,7 @@
                                 <rect key="frame" x="0.0" y="120" width="375" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="N1e-Cd-tg5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="N1e-Cd-tg5" customClass="PeopleSearchTableViewCell" customModule="PriceTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N1e-Cd-tg5" id="MOo-Nz-6F0">
@@ -264,6 +274,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imageView" destination="vgA-Pb-qun" id="pUv-UR-gx9"/>
+                                            <outlet property="profileImageView" destination="vgA-Pb-qun" id="bwv-B6-jnh"/>
+                                            <outlet property="usernameLabel" destination="Nlr-Gm-uE3" id="r54-p6-m9h"/>
                                             <segue destination="sxV-ZH-LTu" kind="show" id="KsY-mA-qak"/>
                                         </connections>
                                     </tableViewCell>
@@ -282,6 +295,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQg-lP-bnw"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="VyA-qw-2h6" id="Oq6-c6-wOm"/>
+                        <outlet property="tableView" destination="YGi-wR-uSU" id="ShL-Mq-98d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgW-bN-smS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -319,7 +336,7 @@
                                     <constraint firstAttribute="height" constant="374" id="scr-KI-d1r"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8dU-mh-wJK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="8dU-mh-wJK" customClass="UserCopyTableViewCell" customModule="PriceTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8dU-mh-wJK" id="LXY-uq-bj0">
@@ -348,6 +365,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Rb-Dp-SOO"/>
                     </view>
+                    <connections>
+                        <outlet property="followUnfollowButton" destination="Wly-rI-mqL" id="1vM-DK-VSc"/>
+                        <outlet property="imageView" destination="AnD-cg-diw" id="Fu5-FT-GCO"/>
+                        <outlet property="tableView" destination="5Fk-a7-Pe1" id="1NR-pz-v8U"/>
+                        <outlet property="userImage" destination="AnD-cg-diw" id="YvH-gW-vwH"/>
+                        <outlet property="usernameLabel" destination="qLe-6V-c6t" id="kRu-ys-Nh8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdD-Y6-EQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -407,6 +431,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="glf-c4-0tj"/>
                     </view>
+                    <connections>
+                        <outlet property="colorLabel" destination="JXL-tF-vwu" id="xcE-e0-gWJ"/>
+                        <outlet property="itemImage" destination="uf7-Vx-FSy" id="QGj-CF-7GW"/>
+                        <outlet property="itemNameLabel" destination="Drr-vB-x5M" id="elT-f0-pcV"/>
+                        <outlet property="notesLabel" destination="G8f-94-RaH" id="xz9-80-RqG"/>
+                        <outlet property="sizeLabel" destination="p9o-qR-wCq" id="MQT-29-F2Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3AU-hH-mUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -424,7 +455,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ddH-QC-ljY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ddH-QC-ljY" customClass="FriendFeedTableViewCell" customModule="PriceTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ddH-QC-ljY" id="fw4-zJ-SkN">
@@ -457,6 +488,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="rGo-CX-J6j" id="v0d-QL-847"/>
                         <segue destination="rmC-sE-qlC" kind="show" identifier="home-profile" id="T58-he-uJ0"/>
                     </connections>
                 </viewController>
@@ -489,7 +521,7 @@
                                 <rect key="frame" x="0.0" y="229" width="375" height="389"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VUX-9e-8ZM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="VUX-9e-8ZM" customClass="UserTableViewCell" customModule="PriceTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VUX-9e-8ZM" id="KCb-AQ-U1S">
@@ -520,6 +552,10 @@
                         <viewLayoutGuide key="safeArea" id="K4D-pX-Kup"/>
                     </view>
                     <connections>
+                        <outlet property="followUnfollowButton" destination="rL8-8r-y84" id="chA-oD-7uK"/>
+                        <outlet property="tableView" destination="mLq-TB-X11" id="6DV-Op-XUR"/>
+                        <outlet property="userImage" destination="Y1A-Zx-OIk" id="sFT-Mx-0kj"/>
+                        <outlet property="usernameLabel" destination="Mof-a0-Ywk" id="vV9-Jm-XjM"/>
                         <segue destination="IIO-bs-gkO" kind="show" identifier="profile-item" id="aSQ-DL-28J"/>
                     </connections>
                 </viewController>
@@ -580,6 +616,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PfN-B0-DtY"/>
                     </view>
+                    <connections>
+                        <outlet property="colorLabel" destination="lS5-Ql-jPp" id="a2j-xG-div"/>
+                        <outlet property="imageView" destination="xTM-Dc-CeL" id="ddS-ca-p9X"/>
+                        <outlet property="itemImage" destination="xTM-Dc-CeL" id="aEY-y1-Ph1"/>
+                        <outlet property="itemNameLabel" destination="bFE-R7-9nY" id="Hog-fr-aRT"/>
+                        <outlet property="notesLabel" destination="TxH-5i-hDZ" id="eJf-X4-rZM"/>
+                        <outlet property="sizeLabel" destination="5q4-bO-wh9" id="8YH-ai-jCy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84P-R6-Zsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -645,7 +689,7 @@
                                 <rect key="frame" x="0.0" y="305" width="375" height="313"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="rty-CL-QOg">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="rty-CL-QOg" customClass="ProfileTableViewCell" customModule="PriceTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rty-CL-QOg" id="ZHP-uf-usK">
@@ -681,6 +725,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="colorLabel" destination="E97-gd-ihn" id="OTl-TH-Ie1"/>
+                                            <outlet property="itemNameLabel" destination="h9A-Rs-nwK" id="8v4-10-O4q"/>
+                                            <outlet property="sizeLabel" destination="0Lv-Cr-Vtd" id="sEV-el-3VH"/>
                                             <segue destination="4Sx-2X-EJb" kind="show" id="po4-IK-Cb8"/>
                                         </connections>
                                     </tableViewCell>
@@ -713,6 +760,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="profileImage" destination="1wU-LM-Vl8" id="jDJ-aN-1Wh"/>
+                        <outlet property="tableView" destination="R4f-q4-CSy" id="4qe-0w-bmb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOf-Hj-Vbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -815,6 +866,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AmZ-nC-KY0"/>
                     </view>
+                    <connections>
+                        <outlet property="colorLabel" destination="57g-7z-43W" id="ho3-8D-MaH"/>
+                        <outlet property="colorTextField" destination="y6q-xB-NjU" id="YtP-YB-XTf"/>
+                        <outlet property="itemNameTextField" destination="Tqk-ZD-fmT" id="OZs-uk-67h"/>
+                        <outlet property="linkLabel" destination="irD-Wc-GbE" id="HZs-nH-lcI"/>
+                        <outlet property="linkTextField" destination="oAC-Ge-RmC" id="D7u-Gs-Vdx"/>
+                        <outlet property="notesLabel" destination="cAI-us-K9b" id="JzI-EO-Oxd"/>
+                        <outlet property="notesTextField" destination="jhi-2m-65z" id="d6P-A3-FG5"/>
+                        <outlet property="saveButton" destination="F07-Vy-40z" id="xeC-es-HSo"/>
+                        <outlet property="sizeLabel" destination="Cvc-Gu-JqE" id="6dk-6r-p18"/>
+                        <outlet property="sizeTextField" destination="Hqy-7d-i1g" id="fvn-wF-aTN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Z6-rz-UZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -882,6 +945,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t6z-gK-zew"/>
                     </view>
+                    <connections>
+                        <outlet property="colorLabel" destination="OgK-cS-LMg" id="301-pm-uWC"/>
+                        <outlet property="deleteEditButton" destination="oma-4Y-Hel" id="5nP-4v-GWQ"/>
+                        <outlet property="itemImage" destination="ZnD-Uh-tss" id="n7t-ty-et4"/>
+                        <outlet property="itemImageView" destination="ZnD-Uh-tss" id="Ym4-Zf-X95"/>
+                        <outlet property="itemNameLabel" destination="sYf-QL-rEm" id="Drc-5s-bx4"/>
+                        <outlet property="notesLabel" destination="9uB-cv-Ssn" id="fg0-4t-LN5"/>
+                        <outlet property="sizeLabel" destination="0D1-hh-R7t" id="7gA-Z3-89E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJb-CI-OZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -989,6 +1061,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lU1-ZK-oDv"/>
                     </view>
+                    <connections>
+                        <outlet property="colorLabel" destination="AmG-gj-hII" id="c7P-49-LEo"/>
+                        <outlet property="colorTextField" destination="ayG-3T-ZK9" id="fFE-Qa-0TA"/>
+                        <outlet property="itemNameTextField" destination="l1i-ga-ZRZ" id="h95-aN-RsL"/>
+                        <outlet property="linkLabel" destination="h2V-r3-EuQ" id="pJ5-lF-Xw2"/>
+                        <outlet property="linkTextField" destination="0FP-FC-BPd" id="f0m-xN-fdb"/>
+                        <outlet property="notesLabel" destination="HNC-iz-pla" id="ydb-KP-y6O"/>
+                        <outlet property="notesTextView" destination="e2i-IJ-YAA" id="1hj-bL-Q2M"/>
+                        <outlet property="saveButton" destination="WbQ-lH-JFP" id="rKd-Xu-YwQ"/>
+                        <outlet property="sizeLabel" destination="iOc-NP-PaH" id="tS9-AD-WJ6"/>
+                        <outlet property="sizeTextField" destination="Vjt-C5-7BL" id="tiO-6b-p0k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A0b-Bs-tk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

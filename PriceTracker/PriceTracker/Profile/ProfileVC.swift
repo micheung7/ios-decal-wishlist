@@ -1,5 +1,5 @@
 //
-//  AddEntryVC.swift
+//  ProfileVC.swift
 //  PriceTracker
 //
 //  Created by Michelle Cheung on 4/4/18.
@@ -8,8 +8,10 @@
 
 import UIKit
 
-class AddEntryVC: UIViewController {
-
+class ProfileVC: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var profileImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

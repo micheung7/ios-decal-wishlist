@@ -9,7 +9,12 @@
 import UIKit
 
 class ItemCopyVC: UIViewController {
-
+    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var sizeLabel: UILabel!
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

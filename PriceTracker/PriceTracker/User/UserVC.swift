@@ -1,5 +1,5 @@
 //
-//  FriendFeedVC.swift
+//  UserVC.swift
 //  PriceTracker
 //
 //  Created by Michelle Cheung on 4/4/18.
@@ -8,8 +8,12 @@
 
 import UIKit
 
-class FriendFeedVC: UIViewController {
-
+class UserVC: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var followUnfollowButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
