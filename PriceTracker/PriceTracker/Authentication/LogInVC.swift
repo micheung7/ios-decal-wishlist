@@ -9,7 +9,13 @@
 import UIKit
 
 class LogInVC: UIViewController {
-
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var logInLabel: UILabel!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var noAccountButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -83,10 +83,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="LogoImage" destination="zZG-tU-cen" id="jxa-vI-VK4"/>
+                        <outlet property="emailTextField" destination="NVL-Hd-4Ym" id="9IH-cN-u3k"/>
+                        <outlet property="logInButton" destination="3fC-2n-R30" id="2qc-eX-tdS"/>
+                        <outlet property="logInLabel" destination="I6n-ad-m8O" id="psc-XK-GUV"/>
+                        <outlet property="logoImage" destination="zZG-tU-cen" id="jPX-uG-mb1"/>
+                        <outlet property="noAccountButton" destination="Ea9-gh-t0T" id="THW-f7-hwI"/>
+                        <outlet property="passwordTextField" destination="c70-bq-seL" id="ZJX-hk-fet"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="-33.733133433283363"/>
+            <point key="canvasLocation" x="-20" y="-707"/>
         </scene>
         <!--SignUpVC-->
         <scene sceneID="P28-KF-MVB">
@@ -188,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhg-h6-vzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="-728.18590704647681"/>
+            <point key="canvasLocation" x="-20" y="10"/>
         </scene>
         <!--Friends NC-->
         <scene sceneID="v6Z-0k-HbX">
