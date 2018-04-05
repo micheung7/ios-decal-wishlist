@@ -358,7 +358,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uf7-Vx-FSy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uf7-Vx-FSy">
                                 <rect key="frame" x="0.0" y="205" width="375" height="118"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9o-qR-wCq">
@@ -388,10 +388,12 @@
                             <constraint firstItem="Drr-vB-x5M" firstAttribute="top" secondItem="glf-c4-0tj" secondAttribute="top" constant="50" id="AhW-Hd-xqW"/>
                             <constraint firstItem="p9o-qR-wCq" firstAttribute="top" secondItem="uf7-Vx-FSy" secondAttribute="bottom" constant="15" id="Byq-sH-yGK"/>
                             <constraint firstItem="G8f-94-RaH" firstAttribute="leading" secondItem="glf-c4-0tj" secondAttribute="leading" constant="25" id="I52-JL-XLs"/>
+                            <constraint firstItem="uf7-Vx-FSy" firstAttribute="leading" secondItem="glf-c4-0tj" secondAttribute="leading" id="WA3-6a-ofh"/>
                             <constraint firstItem="G8f-94-RaH" firstAttribute="top" secondItem="JXL-tF-vwu" secondAttribute="bottom" constant="50" id="ZgJ-XN-Rqo"/>
                             <constraint firstItem="uf7-Vx-FSy" firstAttribute="centerX" secondItem="nSd-VQ-61C" secondAttribute="centerX" id="a4N-EV-sad"/>
                             <constraint firstItem="p9o-qR-wCq" firstAttribute="leading" secondItem="glf-c4-0tj" secondAttribute="leading" constant="25" id="ex4-OX-X8e"/>
                             <constraint firstItem="JXL-tF-vwu" firstAttribute="leading" secondItem="glf-c4-0tj" secondAttribute="leading" constant="25" id="gsV-7r-jyn"/>
+                            <constraint firstItem="glf-c4-0tj" firstAttribute="trailing" secondItem="uf7-Vx-FSy" secondAttribute="trailing" id="j0K-5x-b7A"/>
                             <constraint firstItem="uf7-Vx-FSy" firstAttribute="top" secondItem="Drr-vB-x5M" secondAttribute="bottom" constant="50" id="nRm-mY-Kgd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="glf-c4-0tj"/>
