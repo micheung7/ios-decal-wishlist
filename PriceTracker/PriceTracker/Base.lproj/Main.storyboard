@@ -13,7 +13,7 @@
         <!--LogInVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="LogInVC" id="BYZ-38-t0r" customClass="ViewController" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LogInVC" id="BYZ-38-t0r" customClass="LogInVC" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,7 @@
         <!--SignUpVC-->
         <scene sceneID="P28-KF-MVB">
             <objects>
-                <viewController title="SignUpVC" id="SFp-n8-RaB" sceneMemberID="viewController">
+                <viewController title="SignUpVC" id="SFp-n8-RaB" customClass="SignUpVC" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rns-xl-wSB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,7 +210,7 @@
         <!--PeopleSearchVC-->
         <scene sceneID="514-ac-aia">
             <objects>
-                <viewController title="PeopleSearchVC" id="Zco-5Z-Rmc" sceneMemberID="viewController">
+                <viewController title="PeopleSearchVC" id="Zco-5Z-Rmc" customClass="PeopleSearchVC" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YHh-XY-Ipq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,7 +281,7 @@
         <!--UserCopyVC-->
         <scene sceneID="byN-aC-0sU">
             <objects>
-                <viewController title="UserCopyVC" id="sxV-ZH-LTu" sceneMemberID="viewController">
+                <viewController title="UserCopyVC" id="sxV-ZH-LTu" customClass="UserCopyVC" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ex1-e1-Fta">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -347,7 +347,7 @@
         <!--ItemCopyVC-->
         <scene sceneID="y9X-96-No9">
             <objects>
-                <viewController title="ItemCopyVC" id="ACd-Hk-SGY" sceneMemberID="viewController">
+                <viewController title="ItemCopyVC" id="ACd-Hk-SGY" customClass="ItemCopyVC" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nSd-VQ-61C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -406,7 +406,7 @@
         <!--FriendFeedVC-->
         <scene sceneID="dcR-vy-lGG">
             <objects>
-                <viewController title="FriendFeedVC" id="4h5-pX-n9b" sceneMemberID="viewController">
+                <viewController title="FriendFeedVC" id="4h5-pX-n9b" customClass="FriendFeedVC" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rLf-xd-Vvd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -458,7 +458,7 @@
         <!--UserVC-->
         <scene sceneID="Jmv-EY-Kny">
             <objects>
-                <viewController title="UserVC" id="rmC-sE-qlC" sceneMemberID="viewController">
+                <viewController title="UserVC" id="rmC-sE-qlC" customClass="UserVC" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6yw-jG-rvC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -521,7 +521,7 @@
         <!--ItemVC-->
         <scene sceneID="unf-fm-hNb">
             <objects>
-                <viewController title="ItemVC" id="IIO-bs-gkO" sceneMemberID="viewController">
+                <viewController title="ItemVC" id="IIO-bs-gkO" customClass="ItemVC" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bHR-ci-BGy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -579,7 +579,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="7KY-f9-OEF">
             <objects>
-                <tabBarController id="wbr-iG-lDn" sceneMemberID="viewController">
+                <tabBarController id="wbr-iG-lDn" customClass="TabBarController" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vzF-nh-u8z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -614,7 +614,7 @@
         <!--ProfileVC-->
         <scene sceneID="HpQ-zu-aha">
             <objects>
-                <viewController title="ProfileVC" id="UxT-Km-3I7" sceneMemberID="viewController">
+                <viewController title="ProfileVC" id="UxT-Km-3I7" customClass="ProfileVC" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dUq-As-iQ1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -712,7 +712,7 @@
         <!--AddEntryVC-->
         <scene sceneID="b5o-cF-11j">
             <objects>
-                <viewController title="AddEntryVC" id="3UC-0I-l3r" sceneMemberID="viewController">
+                <viewController title="AddEntryVC" id="3UC-0I-l3r" customClass="AddEntryVC" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E39-yj-5xv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -809,12 +809,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Z6-rz-UZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2437.5999999999999" y="729.98500749625191"/>
+            <point key="canvasLocation" x="3228" y="-35"/>
         </scene>
         <!--ItemEditVC-->
         <scene sceneID="ILp-r4-oIz">
             <objects>
-                <viewController title="ItemEditVC" id="4Sx-2X-EJb" sceneMemberID="viewController">
+                <viewController title="ItemEditVC" id="4Sx-2X-EJb" customClass="ItemEditVC" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vdU-LV-eAd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -876,12 +876,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJb-CI-OZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3228" y="-36.431784107946029"/>
+            <point key="canvasLocation" x="2438" y="727"/>
         </scene>
         <!--UserEditVC-->
         <scene sceneID="z14-J1-sTb">
             <objects>
-                <viewController title="UserEditVC" id="QE2-MU-Snf" sceneMemberID="viewController">
+                <viewController title="UserEditVC" id="QE2-MU-Snf" customClass="UserEditVC" customModule="PriceTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1MP-fU-paD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -983,11 +983,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A0b-Bs-tk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3228" y="729.98500749625191"/>
+            <point key="canvasLocation" x="1625" y="726"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="fFw-KU-6qb"/>
-        <segue reference="AsH-8L-6xI"/>
+        <segue reference="rtK-nb-GaN"/>
     </inferredMetricsTieBreakers>
 </document>
