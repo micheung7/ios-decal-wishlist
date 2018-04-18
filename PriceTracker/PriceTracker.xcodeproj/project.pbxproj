@@ -25,6 +25,7 @@
 		9DAD29152075C32E00C90CCE /* ItemEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD29142075C32E00C90CCE /* ItemEditVC.swift */; };
 		9DAD29172075C35300C90CCE /* AddEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD29162075C35300C90CCE /* AddEntryVC.swift */; };
 		9DAD29192075C42000C90CCE /* UserEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD29182075C42000C90CCE /* UserEditVC.swift */; };
+		A1911E272086BF9800F8F77E /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1911E262086BF9800F8F77E /* strings.swift */; };
 		A1C3DBD7206AE45A00CC213C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3DBD6206AE45A00CC213C /* AppDelegate.swift */; };
 		A1C3DBD9206AE45A00CC213C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3DBD8206AE45A00CC213C /* ViewController.swift */; };
 		A1C3DBDC206AE45A00CC213C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C3DBDA206AE45A00CC213C /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		9DAD29142075C32E00C90CCE /* ItemEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemEditVC.swift; sourceTree = "<group>"; };
 		9DAD29162075C35300C90CCE /* AddEntryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEntryVC.swift; sourceTree = "<group>"; };
 		9DAD29182075C42000C90CCE /* UserEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditVC.swift; sourceTree = "<group>"; };
+		A1911E262086BF9800F8F77E /* strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
 		A1C3DBD3206AE45A00CC213C /* PriceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PriceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C3DBD6206AE45A00CC213C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1C3DBD8206AE45A00CC213C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -184,9 +186,18 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		A1911E282086BFA100F8F77E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A1911E262086BF9800F8F77E /* strings.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		A1C3DBCA206AE45A00CC213C = {
 			isa = PBXGroup;
 			children = (
+				A1911E282086BFA100F8F77E /* Constants */,
 				A1C3DBD5206AE45A00CC213C /* PriceTracker */,
 				A1C3DBEA206AE45A00CC213C /* PriceTrackerTests */,
 				A1C3DBF5206AE45A00CC213C /* PriceTrackerUITests */,
@@ -382,6 +393,7 @@
 				9DAD29072075C06C00C90CCE /* FriendFeedVC.swift in Sources */,
 				9DAD29172075C35300C90CCE /* AddEntryVC.swift in Sources */,
 				A1C3DBD9206AE45A00CC213C /* ViewController.swift in Sources */,
+				A1911E272086BF9800F8F77E /* strings.swift in Sources */,
 				9DAD28FD2075BEAE00C90CCE /* SignUpVC.swift in Sources */,
 				9D8C600620763329003668A1 /* PeopleSearchTableViewCell.swift in Sources */,
 				9DAD290F2075C28D00C90CCE /* UserCopyVC.swift in Sources */,

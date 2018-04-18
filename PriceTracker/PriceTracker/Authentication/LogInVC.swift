@@ -16,6 +16,20 @@ class LogInVC: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var noAccountButton: UIButton!
     
+    /* Action that follows pressing the login button */
+    @IBAction func logInPressed(_ sender: UIButton) {
+        //TODO:
+        //Connect the IBAction
+        //Fille out the Code. Refer to most recent Snapchat Clone's Log In View Controller
+    }
+    
+    /* Action that follows pressing the sign Up button */
+    @IBAction func signUpPressed(_ sender: UIButton) {
+        //TODO:
+        //connect the Action, make an identifier for the segue, uncomment line below with the name of the segue filled in
+        //performSegue(withIdentifier:[NAME THIS SEGUE], sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

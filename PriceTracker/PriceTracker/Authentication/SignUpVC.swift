@@ -18,6 +18,14 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var hasAccountButton: UIButton!
     
+    
+    /* Actions following pressing the Sign up button. */
+    @IBAction func signUpPressed(_ sender: UIButton) {
+        //TODO:
+        //connect action with storyboard item
+        //Refer to signUpViewController file in the last Snapchat lab for reference
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
