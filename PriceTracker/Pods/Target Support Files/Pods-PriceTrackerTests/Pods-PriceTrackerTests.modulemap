@@ -1,0 +1,6 @@
+framework module Pods_PriceTrackerTests {
+  umbrella header "Pods-PriceTrackerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

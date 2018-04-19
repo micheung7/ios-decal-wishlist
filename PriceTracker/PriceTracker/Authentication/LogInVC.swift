@@ -21,6 +21,7 @@ class LogInVC: UIViewController {
         //TODO:
         //Connect the IBAction
         //Fille out the Code. Refer to most recent Snapchat Clone's Log In View Controller
+
          performSegue(withIdentifier: "login-home", sender: self)
     }
     

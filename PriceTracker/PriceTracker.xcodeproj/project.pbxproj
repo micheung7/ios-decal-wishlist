@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84D5EC7C0FDBDD6A46367D8C /* Pods_PriceTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1ACCE55710D53B91EA382 /* Pods_PriceTrackerTests.framework */; };
 		9D8C600020763060003668A1 /* FriendFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C5FFF20763060003668A1 /* FriendFeedTableViewCell.swift */; };
 		9D8C600320763174003668A1 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C600220763174003668A1 /* UserTableViewCell.swift */; };
 		9D8C600620763329003668A1 /* PeopleSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C600520763329003668A1 /* PeopleSearchTableViewCell.swift */; };
@@ -33,6 +34,8 @@
 		A1C3DBE1206AE45A00CC213C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1C3DBDF206AE45A00CC213C /* LaunchScreen.storyboard */; };
 		A1C3DBEC206AE45A00CC213C /* PriceTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3DBEB206AE45A00CC213C /* PriceTrackerTests.swift */; };
 		A1C3DBF7206AE45A00CC213C /* PriceTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3DBF6206AE45A00CC213C /* PriceTrackerUITests.swift */; };
+		E3411451ABCC1E6F1FB22C90 /* Pods_PriceTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC1780725132943A2D3A6FE /* Pods_PriceTracker.framework */; };
+		E6471AADE1B82F2D97ACC39D /* Pods_PriceTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37A400EE28B512E2EC4F7D5 /* Pods_PriceTrackerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C213C7AFE43AD045838897D /* Pods-PriceTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTrackerTests/Pods-PriceTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A9D42F97491AF69B07186A4 /* Pods-PriceTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTracker/Pods-PriceTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		334742F6F3BCE25FE4CA36C2 /* Pods-PriceTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTrackerTests/Pods-PriceTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3AC1780725132943A2D3A6FE /* Pods_PriceTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PriceTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AE77F3DE88E5ADAC279616F /* Pods-PriceTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTrackerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTrackerUITests/Pods-PriceTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5CD5C1A176E872702DABF52E /* Pods-PriceTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTracker/Pods-PriceTracker.release.xcconfig"; sourceTree = "<group>"; };
+		81B1ACCE55710D53B91EA382 /* Pods_PriceTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PriceTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8C5FFF20763060003668A1 /* FriendFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFeedTableViewCell.swift; sourceTree = "<group>"; };
 		9D8C600220763174003668A1 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		9D8C600520763329003668A1 /* PeopleSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleSearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,6 +95,8 @@
 		A1C3DBF2206AE45A00CC213C /* PriceTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PriceTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1C3DBF6206AE45A00CC213C /* PriceTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTrackerUITests.swift; sourceTree = "<group>"; };
 		A1C3DBF8206AE45B00CC213C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E37A400EE28B512E2EC4F7D5 /* Pods_PriceTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PriceTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F920A7187CEC45C8D011822F /* Pods-PriceTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTrackerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTrackerUITests/Pods-PriceTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3411451ABCC1E6F1FB22C90 /* Pods_PriceTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D5EC7C0FDBDD6A46367D8C /* Pods_PriceTrackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +120,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6471AADE1B82F2D97ACC39D /* Pods_PriceTrackerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C6F49A09D8961D3E617FB32 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A9D42F97491AF69B07186A4 /* Pods-PriceTracker.debug.xcconfig */,
+				5CD5C1A176E872702DABF52E /* Pods-PriceTracker.release.xcconfig */,
+				334742F6F3BCE25FE4CA36C2 /* Pods-PriceTrackerTests.debug.xcconfig */,
+				0C213C7AFE43AD045838897D /* Pods-PriceTrackerTests.release.xcconfig */,
+				4AE77F3DE88E5ADAC279616F /* Pods-PriceTrackerUITests.debug.xcconfig */,
+				F920A7187CEC45C8D011822F /* Pods-PriceTrackerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8DD71B752E86C20ADF4709FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AC1780725132943A2D3A6FE /* Pods_PriceTracker.framework */,
+				81B1ACCE55710D53B91EA382 /* Pods_PriceTrackerTests.framework */,
+				E37A400EE28B512E2EC4F7D5 /* Pods_PriceTrackerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D6E7D6D20763A0D002EA206 /* Tab Bar */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +240,8 @@
 				A1C3DBEA206AE45A00CC213C /* PriceTrackerTests */,
 				A1C3DBF5206AE45A00CC213C /* PriceTrackerUITests */,
 				A1C3DBD4206AE45A00CC213C /* Products */,
+				6C6F49A09D8961D3E617FB32 /* Pods */,
+				8DD71B752E86C20ADF4709FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -261,9 +301,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1C3DBFB206AE45B00CC213C /* Build configuration list for PBXNativeTarget "PriceTracker" */;
 			buildPhases = (
+				5AC71A0D493A5AC754BC0B72 /* [CP] Check Pods Manifest.lock */,
 				A1C3DBCF206AE45A00CC213C /* Sources */,
 				A1C3DBD0206AE45A00CC213C /* Frameworks */,
 				A1C3DBD1206AE45A00CC213C /* Resources */,
+				E4C4A18C2158DBB83A882FDA /* [CP] Embed Pods Frameworks */,
+				72A99B18AFD0F28DA0DF483D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,9 +321,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1C3DBFE206AE45B00CC213C /* Build configuration list for PBXNativeTarget "PriceTrackerTests" */;
 			buildPhases = (
+				0C10616D15C4285BE5B55B28 /* [CP] Check Pods Manifest.lock */,
 				A1C3DBE3206AE45A00CC213C /* Sources */,
 				A1C3DBE4206AE45A00CC213C /* Frameworks */,
 				A1C3DBE5206AE45A00CC213C /* Resources */,
+				DE969AEB59251BD95A1630FF /* [CP] Embed Pods Frameworks */,
+				1F0C99B3783627D161264A1D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,9 +342,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1C3DC01206AE45B00CC213C /* Build configuration list for PBXNativeTarget "PriceTrackerUITests" */;
 			buildPhases = (
+				A2E34E15A1A6252AF43C935B /* [CP] Check Pods Manifest.lock */,
 				A1C3DBEE206AE45A00CC213C /* Sources */,
 				A1C3DBEF206AE45A00CC213C /* Frameworks */,
 				A1C3DBF0206AE45A00CC213C /* Resources */,
+				8BD7AC0E34995C5EA2ABC011 /* [CP] Embed Pods Frameworks */,
+				8548270C9E0E324F4B2BE70C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -382,6 +431,158 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C10616D15C4285BE5B55B28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PriceTrackerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F0C99B3783627D161264A1D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PriceTrackerTests/Pods-PriceTrackerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AC71A0D493A5AC754BC0B72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PriceTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72A99B18AFD0F28DA0DF483D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PriceTracker/Pods-PriceTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8548270C9E0E324F4B2BE70C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PriceTrackerUITests/Pods-PriceTrackerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BD7AC0E34995C5EA2ABC011 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PriceTrackerUITests/Pods-PriceTrackerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2E34E15A1A6252AF43C935B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PriceTrackerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE969AEB59251BD95A1630FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PriceTrackerTests/Pods-PriceTrackerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4C4A18C2158DBB83A882FDA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PriceTracker/Pods-PriceTracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PriceTracker/Pods-PriceTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A1C3DBCF206AE45A00CC213C /* Sources */ = {
@@ -572,9 +773,11 @@
 		};
 		A1C3DBFC206AE45B00CC213C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A9D42F97491AF69B07186A4 /* Pods-PriceTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84LH7X78WM;
 				INFOPLIST_FILE = PriceTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Emily-Hill.PriceTracker";
@@ -586,9 +789,11 @@
 		};
 		A1C3DBFD206AE45B00CC213C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CD5C1A176E872702DABF52E /* Pods-PriceTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84LH7X78WM;
 				INFOPLIST_FILE = PriceTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Emily-Hill.PriceTracker";
@@ -600,6 +805,7 @@
 		};
 		A1C3DBFF206AE45B00CC213C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 334742F6F3BCE25FE4CA36C2 /* Pods-PriceTrackerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -616,6 +822,7 @@
 		};
 		A1C3DC00206AE45B00CC213C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C213C7AFE43AD045838897D /* Pods-PriceTrackerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -632,6 +839,7 @@
 		};
 		A1C3DC02206AE45B00CC213C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AE77F3DE88E5ADAC279616F /* Pods-PriceTrackerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -647,6 +855,7 @@
 		};
 		A1C3DC03206AE45B00CC213C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F920A7187CEC45C8D011822F /* Pods-PriceTrackerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
