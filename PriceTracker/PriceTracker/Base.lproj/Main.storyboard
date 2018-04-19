@@ -153,6 +153,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Already have an account? Log In"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="signup-login" id="UXS-R0-WcS"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Peb-df-8qG">
                                 <rect key="frame" x="87" y="80" width="200" height="200"/>
@@ -1098,6 +1101,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="po4-IK-Cb8"/>
         <segue reference="NCj-hI-lyn"/>
-        <segue reference="rtK-nb-GaN"/>
+        <segue reference="AsH-8L-6xI"/>
     </inferredMetricsTieBreakers>
 </document>
