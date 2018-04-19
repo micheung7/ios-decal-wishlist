@@ -49,6 +49,10 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Don't have an account? Sign Up"/>
+                                <connections>
+                                    <action selector="signUpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JlI-Qz-6jp"/>
+                                    <segue destination="SFp-n8-RaB" kind="show" identifier="login-signup" id="nJO-Vp-Wn8"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zZG-tU-cen">
                                 <rect key="frame" x="87" y="80" width="200" height="200"/>
@@ -62,6 +66,7 @@
                                 <rect key="frame" x="166" y="441" width="42" height="30"/>
                                 <state key="normal" title="Log In"/>
                                 <connections>
+                                    <action selector="logInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sk-kN-ckq"/>
                                     <segue destination="wbr-iG-lDn" kind="show" identifier="login-home" id="rtK-nb-GaN"/>
                                 </connections>
                             </button>
@@ -1093,6 +1098,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="po4-IK-Cb8"/>
         <segue reference="NCj-hI-lyn"/>
-        <segue reference="AsH-8L-6xI"/>
+        <segue reference="rtK-nb-GaN"/>
     </inferredMetricsTieBreakers>
 </document>

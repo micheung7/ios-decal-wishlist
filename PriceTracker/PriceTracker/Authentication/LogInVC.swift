@@ -21,6 +21,7 @@ class LogInVC: UIViewController {
         //TODO:
         //Connect the IBAction
         //Fille out the Code. Refer to most recent Snapchat Clone's Log In View Controller
+                performSegue(withIdentifier: "login-home", sender: self)
     }
     
     /* Action that follows pressing the sign Up button */
@@ -28,6 +29,7 @@ class LogInVC: UIViewController {
         //TODO:
         //connect the Action, make an identifier for the segue, uncomment line below with the name of the segue filled in
         //performSegue(withIdentifier:[NAME THIS SEGUE], sender: self)
+        performSegue(withIdentifier: "login-signup", sender: self)
     }
     
     override func viewDidLoad() {
