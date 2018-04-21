@@ -486,9 +486,12 @@
                                 <rect key="frame" x="241" y="7" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Seach for friends"/>
+                                <connections>
+                                    <segue destination="Zco-5Z-Rmc" kind="show" identifier="feed-search" id="tEk-F2-WQf"/>
+                                </connections>
                             </button>
                             <connections>
-                                <segue destination="Zco-5Z-Rmc" kind="show" identifier="feed-search" id="Eh9-hX-zX4"/>
+                                <action selector="searchButton:" destination="4h5-pX-n9b" id="29l-dO-MYk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1096,6 +1099,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="UXS-R0-WcS"/>
         <segue reference="po4-IK-Cb8"/>
         <segue reference="NCj-hI-lyn"/>
         <segue reference="AsH-8L-6xI"/>
