@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		509C7350208BCC1500156559 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 509C734F208BCC1400156559 /* GoogleService-Info.plist */; };
 		84D5EC7C0FDBDD6A46367D8C /* Pods_PriceTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1ACCE55710D53B91EA382 /* Pods_PriceTrackerTests.framework */; };
 		9D8C600020763060003668A1 /* FriendFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C5FFF20763060003668A1 /* FriendFeedTableViewCell.swift */; };
 		9D8C600320763174003668A1 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C600220763174003668A1 /* UserTableViewCell.swift */; };
@@ -61,6 +62,7 @@
 		334742F6F3BCE25FE4CA36C2 /* Pods-PriceTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTrackerTests/Pods-PriceTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3AC1780725132943A2D3A6FE /* Pods_PriceTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PriceTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE77F3DE88E5ADAC279616F /* Pods-PriceTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTrackerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTrackerUITests/Pods-PriceTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		509C734F208BCC1400156559 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5CD5C1A176E872702DABF52E /* Pods-PriceTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTracker/Pods-PriceTracker.release.xcconfig"; sourceTree = "<group>"; };
 		81B1ACCE55710D53B91EA382 /* Pods_PriceTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PriceTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8C5FFF20763060003668A1 /* FriendFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				A1C3DBEA206AE45A00CC213C /* PriceTrackerTests */,
 				A1C3DBF5206AE45A00CC213C /* PriceTrackerUITests */,
 				A1C3DBD4206AE45A00CC213C /* Products */,
+				509C734F208BCC1400156559 /* GoogleService-Info.plist */,
 				6C6F49A09D8961D3E617FB32 /* Pods */,
 				8DD71B752E86C20ADF4709FD /* Frameworks */,
 			);
@@ -411,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C3DBE1206AE45A00CC213C /* LaunchScreen.storyboard in Resources */,
+				509C7350208BCC1500156559 /* GoogleService-Info.plist in Resources */,
 				A1C3DBDE206AE45A00CC213C /* Assets.xcassets in Resources */,
 				A1C3DBDC206AE45A00CC213C /* Main.storyboard in Resources */,
 			);
