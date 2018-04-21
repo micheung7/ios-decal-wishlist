@@ -28,6 +28,8 @@ class SignUpVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.logoImage.image = #imageLiteral(resourceName: "WishList Logo.png")
 
         // Do any additional setup after loading the view.
     }

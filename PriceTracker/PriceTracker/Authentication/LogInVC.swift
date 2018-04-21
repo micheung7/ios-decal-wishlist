@@ -16,6 +16,7 @@ class LogInVC: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var noAccountButton: UIButton!
     
+    
     /* Action that follows pressing the login button */
     @IBAction func logInPressed(_ sender: UIButton) {
         //TODO:
@@ -35,6 +36,8 @@ class LogInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.logoImage.image = #imageLiteral(resourceName: "WishList Logo.png")
 
         // Do any additional setup after loading the view.
     }
