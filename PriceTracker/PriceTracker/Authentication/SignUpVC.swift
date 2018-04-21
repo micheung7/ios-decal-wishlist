@@ -16,7 +16,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var hasAccountButton: UIButton!
     
     var userEmail = ""

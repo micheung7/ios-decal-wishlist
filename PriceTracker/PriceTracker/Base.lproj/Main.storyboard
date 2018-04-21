@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,7 +67,6 @@
                                 <state key="normal" title="Log In"/>
                                 <connections>
                                     <action selector="logInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sk-kN-ckq"/>
-                                    <segue destination="wbr-iG-lDn" kind="show" identifier="login-home" id="rtK-nb-GaN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,11 +90,11 @@
                     <connections>
                         <outlet property="LogoImage" destination="zZG-tU-cen" id="jxa-vI-VK4"/>
                         <outlet property="emailTextField" destination="NVL-Hd-4Ym" id="9IH-cN-u3k"/>
-                        <outlet property="logInButton" destination="3fC-2n-R30" id="2qc-eX-tdS"/>
                         <outlet property="logInLabel" destination="I6n-ad-m8O" id="psc-XK-GUV"/>
                         <outlet property="logoImage" destination="zZG-tU-cen" id="jPX-uG-mb1"/>
                         <outlet property="noAccountButton" destination="Ea9-gh-t0T" id="THW-f7-hwI"/>
                         <outlet property="passwordTextField" destination="c70-bq-seL" id="ZJX-hk-fet"/>
+                        <segue destination="wbr-iG-lDn" kind="show" identifier="login-home" id="W3S-3r-PzI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -178,7 +177,6 @@
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpPressed:" destination="SFp-n8-RaB" eventType="touchUpInside" id="UFV-5o-BMi"/>
-                                    <segue destination="wbr-iG-lDn" kind="show" identifier="signup-home" id="AsH-8L-6xI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -209,9 +207,9 @@
                         <outlet property="hasAccountButton" destination="WKq-ZC-qfk" id="dEP-fU-pRV"/>
                         <outlet property="logoImage" destination="Peb-df-8qG" id="iOU-5u-K8P"/>
                         <outlet property="passwordTextField" destination="Lw9-ue-VNq" id="RKz-je-Z2i"/>
-                        <outlet property="signUpButton" destination="Phs-Gb-3g2" id="YVE-fV-i7R"/>
                         <outlet property="signUpLabel" destination="YNk-J6-K3f" id="ScA-lz-P8J"/>
                         <outlet property="usernameTextField" destination="3qG-T5-mJ7" id="1yL-7n-lN2"/>
+                        <segue destination="wbr-iG-lDn" kind="show" identifier="signup-home" id="Nl6-c5-XIM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhg-h6-vzO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1103,9 +1101,8 @@
         <image name="icons8-user-groups-25.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UXS-R0-WcS"/>
         <segue reference="po4-IK-Cb8"/>
         <segue reference="xlP-8b-D7G"/>
-        <segue reference="rtK-nb-GaN"/>
+        <segue reference="W3S-3r-PzI"/>
     </inferredMetricsTieBreakers>
 </document>

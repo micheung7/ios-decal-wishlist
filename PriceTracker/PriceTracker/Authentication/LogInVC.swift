@@ -14,7 +14,6 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var logInLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var noAccountButton: UIButton!
 
     var userEmail = ""
