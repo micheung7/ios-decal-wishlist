@@ -6,7 +6,13 @@ target 'PriceTracker' do
   use_frameworks!
 
   # Pods for PriceTracker
-  pod 'Firebase/Core'	
+  pod 'Firebase/Core'
+pod 'FirebaseAuth'
+pod 'FirebaseStorage'
+pod 'SDWebImage'
+pod 'MBProgressHUD'
+pod 'SDWebImage'
+pod 'FirebaseDatabase'	
 
   target 'PriceTrackerTests' do
     inherit! :search_paths
