@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -177,6 +177,7 @@
                                 </constraints>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
+                                    <action selector="signUpPressed:" destination="SFp-n8-RaB" eventType="touchUpInside" id="UFV-5o-BMi"/>
                                     <segue destination="wbr-iG-lDn" kind="show" identifier="signup-home" id="AsH-8L-6xI"/>
                                 </connections>
                             </button>
@@ -245,26 +246,23 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VyA-qw-2h6">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Zco-5Z-Rmc" id="EFI-P0-iXq"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YGi-wR-uSU">
                                 <rect key="frame" x="0.0" y="120" width="375" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="N1e-Cd-tg5" customClass="PeopleSearchTableViewCell" customModule="PriceTracker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="N1e-Cd-tg5" customClass="PeopleSearchTableViewCell" customModule="PriceTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N1e-Cd-tg5" id="MOo-Nz-6F0">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vgA-Pb-qun">
-                                                    <rect key="frame" x="25" y="0.0" width="45" height="45"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="45" id="UJT-S3-gSh"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlr-Gm-uE3">
-                                                    <rect key="frame" x="95" y="11" width="108" height="21"/>
+                                                    <rect key="frame" x="25" y="11" width="108" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="108" id="ZzL-Sv-zOg"/>
                                                     </constraints>
@@ -275,20 +273,19 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Nlr-Gm-uE3" firstAttribute="centerY" secondItem="MOo-Nz-6F0" secondAttribute="centerY" id="0e3-hz-K2C"/>
-                                                <constraint firstItem="vgA-Pb-qun" firstAttribute="top" secondItem="MOo-Nz-6F0" secondAttribute="top" id="Ke2-vk-mat"/>
-                                                <constraint firstItem="vgA-Pb-qun" firstAttribute="centerY" secondItem="MOo-Nz-6F0" secondAttribute="centerY" id="SvZ-l0-n2P"/>
-                                                <constraint firstItem="vgA-Pb-qun" firstAttribute="leading" secondItem="MOo-Nz-6F0" secondAttribute="leading" constant="25" id="fw4-jh-iyQ"/>
-                                                <constraint firstItem="Nlr-Gm-uE3" firstAttribute="leading" secondItem="vgA-Pb-qun" secondAttribute="trailing" constant="25" id="xkx-EC-nTN"/>
+                                                <constraint firstItem="Nlr-Gm-uE3" firstAttribute="leading" secondItem="MOo-Nz-6F0" secondAttribute="leading" constant="25" id="qse-Mb-de4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageView" destination="vgA-Pb-qun" id="pUv-UR-gx9"/>
-                                            <outlet property="profileImageView" destination="vgA-Pb-qun" id="bwv-B6-jnh"/>
                                             <outlet property="usernameLabel" destination="Nlr-Gm-uE3" id="r54-p6-m9h"/>
                                             <segue destination="sxV-ZH-LTu" kind="show" identifier="search-usercopy" id="KsY-mA-qak"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Zco-5Z-Rmc" id="vOn-ts-L5o"/>
+                                    <outlet property="delegate" destination="Zco-5Z-Rmc" id="J5p-aY-Znk"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -489,9 +486,12 @@
                                 <rect key="frame" x="241" y="7" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Seach for friends"/>
+                                <connections>
+                                    <segue destination="Zco-5Z-Rmc" kind="show" identifier="feed-search" id="tEk-F2-WQf"/>
+                                </connections>
                             </button>
                             <connections>
-                                <segue destination="Zco-5Z-Rmc" kind="show" identifier="feed-search" id="Eh9-hX-zX4"/>
+                                <action selector="searchButton:" destination="4h5-pX-n9b" id="29l-dO-MYk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1103,6 +1103,7 @@
         <image name="icons8-user-groups-25.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="UXS-R0-WcS"/>
         <segue reference="po4-IK-Cb8"/>
         <segue reference="xlP-8b-D7G"/>
         <segue reference="rtK-nb-GaN"/>

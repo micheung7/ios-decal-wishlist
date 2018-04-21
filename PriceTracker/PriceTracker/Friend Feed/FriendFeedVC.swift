@@ -22,6 +22,9 @@ class FriendFeedVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func searchButton(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "feed-search", sender: self)
+    }
 
     /*
     // MARK: - Navigation
