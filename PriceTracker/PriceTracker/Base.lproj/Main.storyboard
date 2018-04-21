@@ -177,6 +177,7 @@
                                 </constraints>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
+                                    <action selector="signUpPressed:" destination="SFp-n8-RaB" eventType="touchUpInside" id="UFV-5o-BMi"/>
                                     <segue destination="wbr-iG-lDn" kind="show" identifier="signup-home" id="AsH-8L-6xI"/>
                                 </connections>
                             </button>
