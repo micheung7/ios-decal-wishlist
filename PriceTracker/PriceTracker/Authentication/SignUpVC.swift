@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
 
 class SignUpVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var logoImage: UIImageView!
@@ -47,6 +48,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                     changeReq.commitChanges(completion:
                         { (err) in
                     })
+                    
                     let alertController = UIAlertController(title: "Congratulations!", message: "You have successfully signed up", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler:
                         {
@@ -78,6 +80,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         self.confirmPasswordTextField.delegate = self
+        
 
 
         // Do any additional setup after loading the view.
