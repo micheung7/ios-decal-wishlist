@@ -14,6 +14,7 @@ class PeopleSearchVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var results: [String] = []
     var currentResults : [String] = [] // update table
+    var usernameToSend : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,11 @@ class PeopleSearchVC: UIViewController, UITableViewDataSource, UITableViewDelega
         return 80
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        usernameToSend = getUsernames()[indexPath.row]
+        performSegue(withIdentifier: "search-usercopy", sender: self)
+    }
+    
     // Search Bar
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         guard !searchText.isEmpty else {
@@ -59,6 +65,12 @@ class PeopleSearchVC: UIViewController, UITableViewDataSource, UITableViewDelega
             user.lowercased().contains(searchText.lowercased())
         })
         tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let VCHeadedTo = segue.destination as? UserCopyVC {
+            VCHeadedTo.usernameFromPeopleSearch = usernameToSend
+        }
     }
     
     /*
