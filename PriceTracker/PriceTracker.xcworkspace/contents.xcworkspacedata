@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/Albert/iosDecal/project/ios-decal-pricetracker/PriceTracker/Constants/CurrentUser.swift">
+   </FileRef>
+   <FileRef
       location = "group:PriceTracker.xcodeproj">
    </FileRef>
    <FileRef

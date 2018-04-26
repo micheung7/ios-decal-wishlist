@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50FA7BBC20916F8B0066596E /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FA7BBB20916F8A0066596E /* CurrentUser.swift */; };
 		84D5EC7C0FDBDD6A46367D8C /* Pods_PriceTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1ACCE55710D53B91EA382 /* Pods_PriceTrackerTests.framework */; };
 		9D8C600020763060003668A1 /* FriendFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C5FFF20763060003668A1 /* FriendFeedTableViewCell.swift */; };
 		9D8C600320763174003668A1 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C600220763174003668A1 /* UserTableViewCell.swift */; };
@@ -66,6 +67,7 @@
 		334742F6F3BCE25FE4CA36C2 /* Pods-PriceTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTrackerTests/Pods-PriceTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3AC1780725132943A2D3A6FE /* Pods_PriceTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PriceTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE77F3DE88E5ADAC279616F /* Pods-PriceTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTrackerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTrackerUITests/Pods-PriceTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		50FA7BBB20916F8A0066596E /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CurrentUser.swift; path = "/Users/Albert/iosDecal/project/ios-decal-pricetracker/PriceTracker/Constants/CurrentUser.swift"; sourceTree = "<absolute>"; };
 		5CD5C1A176E872702DABF52E /* Pods-PriceTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTracker/Pods-PriceTracker.release.xcconfig"; sourceTree = "<group>"; };
 		81B1ACCE55710D53B91EA382 /* Pods_PriceTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PriceTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8C5FFF20763060003668A1 /* FriendFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		A1911E282086BFA100F8F77E /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				50FA7BBB20916F8A0066596E /* CurrentUser.swift */,
 				A1717375208BF984009CCEF6 /* UserDatabase.swift */,
 				A1911E262086BF9800F8F77E /* strings.swift */,
 			);
@@ -626,6 +629,7 @@
 			files = (
 				9DAD29132075C31200C90CCE /* ProfileVC.swift in Sources */,
 				9DAD29092075C09F00C90CCE /* UserVC.swift in Sources */,
+				50FA7BBC20916F8B0066596E /* CurrentUser.swift in Sources */,
 				9DAD29072075C06C00C90CCE /* FriendFeedVC.swift in Sources */,
 				9DAD29172075C35300C90CCE /* AddEntryVC.swift in Sources */,
 				A1C3DBD9206AE45A00CC213C /* ViewController.swift in Sources */,
