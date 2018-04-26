@@ -622,7 +622,6 @@
                     </view>
                     <connections>
                         <outlet property="colorLabel" destination="lS5-Ql-jPp" id="a2j-xG-div"/>
-                        <outlet property="imageView" destination="xTM-Dc-CeL" id="ddS-ca-p9X"/>
                         <outlet property="itemImage" destination="xTM-Dc-CeL" id="aEY-y1-Ph1"/>
                         <outlet property="itemNameLabel" destination="bFE-R7-9nY" id="Hog-fr-aRT"/>
                         <outlet property="notesLabel" destination="TxH-5i-hDZ" id="eJf-X4-rZM"/>
@@ -677,7 +676,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1wU-LM-Vl8">
-                                <rect key="frame" x="112.5" y="114" width="150" height="150"/>
+                                <rect key="frame" x="112.5" y="70" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="E1e-Sc-JH3"/>
                                     <constraint firstAttribute="height" constant="150" id="ehW-z5-uwY"/>
@@ -690,7 +689,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R4f-q4-CSy">
-                                <rect key="frame" x="0.0" y="305" width="375" height="313"/>
+                                <rect key="frame" x="0.0" y="261" width="375" height="406"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="rty-CL-QOg" customClass="ProfileTableViewCell" customModule="PriceTracker" customModuleProvider="target">
@@ -786,7 +785,7 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tqk-ZD-fmT">
-                                <rect key="frame" x="25" y="104" width="91" height="30"/>
+                                <rect key="frame" x="25" y="60" width="91" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -828,7 +827,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57g-7z-43W">
-                                <rect key="frame" x="25" y="281" width="42" height="20.5"/>
+                                <rect key="frame" x="25" y="237" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -964,7 +963,6 @@
                         <outlet property="colorLabel" destination="OgK-cS-LMg" id="301-pm-uWC"/>
                         <outlet property="deleteEditButton" destination="oma-4Y-Hel" id="5nP-4v-GWQ"/>
                         <outlet property="itemImage" destination="ZnD-Uh-tss" id="n7t-ty-et4"/>
-                        <outlet property="itemImageView" destination="ZnD-Uh-tss" id="Ym4-Zf-X95"/>
                         <outlet property="itemNameLabel" destination="sYf-QL-rEm" id="Drc-5s-bx4"/>
                         <outlet property="notesLabel" destination="9uB-cv-Ssn" id="fg0-4t-LN5"/>
                         <outlet property="sizeLabel" destination="0D1-hh-R7t" id="7gA-Z3-89E"/>
@@ -983,7 +981,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e2i-IJ-YAA">
-                                <rect key="frame" x="25" y="410" width="325" height="158"/>
+                                <rect key="frame" x="25" y="366" width="325" height="251"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="325" id="lKa-el-wId"/>
@@ -1035,7 +1033,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WbQ-lH-JFP">
-                                <rect key="frame" x="326" y="64" width="34" height="30"/>
+                                <rect key="frame" x="326" y="20" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <segue destination="4Sx-2X-EJb" kind="show" identifier="useredit-itemedit" id="fFw-KU-6qb"/>
@@ -1100,7 +1098,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="po4-IK-Cb8"/>
-        <segue reference="xlP-8b-D7G"/>
+        <segue reference="NCj-hI-lyn"/>
         <segue reference="W3S-3r-PzI"/>
     </inferredMetricsTieBreakers>
 </document>
