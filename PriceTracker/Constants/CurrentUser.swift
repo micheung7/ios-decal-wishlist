@@ -1,6 +1,5 @@
-//
 //  CurrentUser.swift
-//  
+//
 //
 //  Created by Albert Huang on 4/25/18.
 //
@@ -13,6 +12,9 @@ class CurrentUser {
     
     var username: String!
     var id: String!
+    var email: String!
+    var friendList: [String]
+    var itemList: [String]
     
     let dbRef = Database.database().reference()
     
@@ -20,28 +22,15 @@ class CurrentUser {
         let currentUser = Auth.auth().currentUser
         username = currentUser?.displayName
         id = currentUser?.uid
+        email = currentUser?.email
+        friendList = [String]()
+        itemList = [String]()
     }
     
-    func getReadPostIDs(completion: @escaping ([String]) -> Void) {
-        var postArray: [String] = []
-        dbRef.child("Users/\(id!)/readPosts").observeSingleEvent(of: .value, with: { (snapshot) in
-            if snapshot.exists() {
-                if let posts = snapshot.value as? [String:AnyObject] {
-                    for key in posts.keys {
-                        postArray.append(posts[key] as! String)
-                    }
-                    completion(postArray)
-                } else {
-                    completion([])
-                }
-            } else {
-                completion([])
-            }
-        })
-    }
-    
-    func addNewReadPost(postID: String) {
+    func addNewItemPost(postID: String) {
+        //TODO: change readposts self.id and post ID
         dbRef.child("Users/\(self.id!)/readPosts").childByAutoId().setValue(postID)
     }
     
 }
+
