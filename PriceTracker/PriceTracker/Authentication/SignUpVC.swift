@@ -51,10 +51,14 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                     changeReq.commitChanges(completion:
                         { (err) in
                     })
-                    self.dbRef.child("users").child((user?.uid)!).setValue(["username": self.userName])
-                    self.dbRef.child("users").child((user?.uid)!).setValue(["email": self.userEmail])
-                    self.dbRef.child("users").child((user?.uid)!).child("friendList").setValue(["list": []])
-                    self.dbRef.child("users").child((user?.uid)!).child("itemList").setValue(["list": []])
+                    
+                    let item = Item.init(itemName: "(item name here)", itemURL: "(item url here)", itemSize: "(item size here)", itemColor: "(item color here)", postID: "(post id here)")
+                    let list = [Item]()
+                    
+                    self.dbRef.child("users").child((user?.uid)!).child("username").setValue(self.userName)
+                    self.dbRef.child("users").child((user?.uid)!).child("email").setValue(self.userEmail)
+                    self.dbRef.child("users").child((user?.uid)!).child("friendList").setValue(self.userName)
+                    self.dbRef.child("users").child((user?.uid)!).child("itemList").setValue(list)
                     
                     
                     let alertController = UIAlertController(title: "Congratulations!", message: "You have successfully signed up", preferredStyle: .alert)
