@@ -53,11 +53,13 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                     })
                     
                     let item = Item.init(itemName: "(item name here)", itemURL: "(item url here)", itemSize: "(item size here)", itemColor: "(item color here)", postID: "(post id here)")
-                    let list = [Item]()
+                    var list = [Item]()
+                    list.append(item)
+                    var friends = [self.userName]
                     
                     self.dbRef.child("users").child((user?.uid)!).child("username").setValue(self.userName)
                     self.dbRef.child("users").child((user?.uid)!).child("email").setValue(self.userEmail)
-                    self.dbRef.child("users").child((user?.uid)!).child("friendList").setValue(self.userName)
+                    self.dbRef.child("users").child((user?.uid)!).child("friendList").setValue(friends)
                     self.dbRef.child("users").child((user?.uid)!).child("itemList").setValue(list)
                     
                     
