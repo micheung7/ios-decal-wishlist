@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Foundation
+import FirebaseDatabase
+import FirebaseStorage
 
 class AddEntryVC: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
@@ -29,6 +32,18 @@ class AddEntryVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func addItem(itemName: String, itemLink: String, itemSize: String, itemColor: String) {
+        let dbRef = Database.database().reference()
+        
+        let itemAttr : [String:String] = ["name" : itemName,
+                                             "link" : itemLink,
+                                             "size": itemSize,
+                                             "color": itemColor]
+        
+        dbRef.child("Posts").childByAutoId().setValue(itemAttr)
+        //dbRef.child("")
     }
     
 
