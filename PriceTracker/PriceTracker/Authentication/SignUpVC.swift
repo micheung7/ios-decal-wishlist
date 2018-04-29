@@ -6,9 +6,11 @@
 //  Copyright © 2018 MAE. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import FirebaseAuth
-import Firebase
+import FirebaseDatabase
+import FirebaseStorage
 
 class SignUpVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var logoImage: UIImageView!
@@ -24,6 +26,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
     var userPassword = ""
     var userVerifiedPassWord = ""
     
+    let dbRef = Database.database().reference()
     
     /* Actions following pressing the Sign up button. */
     @IBAction func signUpPressed(_ sender: UIButton) {
@@ -48,6 +51,11 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                     changeReq.commitChanges(completion:
                         { (err) in
                     })
+                    self.dbRef.child("users").child((user?.uid)!).setValue(["username": self.userName])
+                    self.dbRef.child("users").child((user?.uid)!).setValue(["email": self.userEmail])
+                    self.dbRef.child("users").child((user?.uid)!).child("friendList").setValue(["list": []])
+                    self.dbRef.child("users").child((user?.uid)!).child("itemList").setValue(["list": []])
+                    
                     
                     let alertController = UIAlertController(title: "Congratulations!", message: "You have successfully signed up", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler:
@@ -71,6 +79,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

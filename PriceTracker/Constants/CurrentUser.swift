@@ -4,9 +4,11 @@
 //  Created by Albert Huang on 4/25/18.
 //
 
-import Foundation
-import FirebaseDatabase
 import FirebaseAuth
+import UIKit
+import FirebaseDatabase
+import FirebaseStorage
+import MBProgressHUD
 
 class CurrentUser {
     
@@ -25,6 +27,10 @@ class CurrentUser {
         email = currentUser?.email
         friendList = [String]()
         itemList = [String]()
+    }
+    
+    func newUser(email_inp: String, username_inp: String, id_inp: String) {
+        
     }
     
     func addNewItemPost(postID: String) {
