@@ -52,13 +52,33 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                         { (err) in
                     })
                     
-                    var list = ["random id"]
-                    var friends = [self.userName]
                     
-                    self.dbRef.child("users").child((user?.uid)!).child("username").setValue(self.userName)
-                    self.dbRef.child("users").child((user?.uid)!).child("email").setValue(self.userEmail)
+                    var friends = [self.userName]
+                    var itemList = [""]
+                
+                    
+                    let newItemRef = self.dbRef.child("items").childByAutoId()
+                    let newItemId = newItemRef.key
+                    let newItemData = [
+                        "itemname" : "My Cool Shoes",
+                        "link" : "None",
+                        "size" : "M",
+                        "color" : "blizzard blue"]
+                    newItemRef.setValue(newItemData)
+                    itemList[0] = newItemId
+                    
+                    let newUserRef = self.dbRef.child("users").child((user?.uid)!)
+                    let newUserData = [
+                        "username" : self.userName,
+                        "email" : self.userEmail]
                     self.dbRef.child("users").child((user?.uid)!).child("friendList").setValue(friends)
-                    self.dbRef.child("users").child((user?.uid)!).child("itemList").setValue(list)
+                    self.dbRef.child("users").child((user?.uid)!).child("itemList").setValue(itemList)
+                    
+//                    self.dbRef.child("items").childByAutoId().child("itemname").setValue("My Cool Shoes")
+//                    self.dbRef.child("items").childByAutoId().child("link").setValue("None")
+//                    self.dbRef.child("items").childByAutoId().child("size").setValue("M")
+//                    self.dbRef.child("items").childByAutoId().child("color").setValue("blizzard blue")
+                    
                     
                     
                     let alertController = UIAlertController(title: "Congratulations!", message: "You have successfully signed up", preferredStyle: .alert)
