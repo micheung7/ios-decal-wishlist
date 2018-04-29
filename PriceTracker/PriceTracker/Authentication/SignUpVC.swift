@@ -71,6 +71,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                     let newUserData = [
                         "username" : self.userName,
                         "email" : self.userEmail]
+                    newUserRef.setValue(newUserData)
                     self.dbRef.child("users").child((user?.uid)!).child("friendList").setValue(friends)
                     self.dbRef.child("users").child((user?.uid)!).child("itemList").setValue(itemList)
                     
