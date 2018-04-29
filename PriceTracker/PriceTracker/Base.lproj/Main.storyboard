@@ -258,7 +258,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlr-Gm-uE3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlr-Gm-uE3">
                                                     <rect key="frame" x="25" y="11" width="108" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="108" id="ZzL-Sv-zOg"/>
@@ -274,7 +274,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="usernameLabel" destination="Nlr-Gm-uE3" id="r54-p6-m9h"/>
+                                            <outlet property="emailLabel" destination="Nlr-Gm-uE3" id="HiI-Wo-bA4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1099,6 +1099,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="po4-IK-Cb8"/>
         <segue reference="NCj-hI-lyn"/>
-        <segue reference="W3S-3r-PzI"/>
+        <segue reference="Nl6-c5-XIM"/>
     </inferredMetricsTieBreakers>
 </document>
