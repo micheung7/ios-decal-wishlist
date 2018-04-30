@@ -756,6 +756,9 @@
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="Add:" destination="UxT-Km-3I7" eventType="touchUpInside" id="ynp-h0-cPs"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

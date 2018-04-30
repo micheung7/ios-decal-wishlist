@@ -66,6 +66,7 @@ class AddEntryVC: UIViewController {
         var count = [Any]()
         dbRef.observe(.value) { snapshot in
             for child in snapshot.children {
+                
                 count.append(child)
             }
         }

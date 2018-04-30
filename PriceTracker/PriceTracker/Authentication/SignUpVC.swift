@@ -53,7 +53,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                     })
                     
                     
-                    var friends = [self.userName]
+                    var friends = [user?.uid]
                     var itemList = [""]
                 
                     

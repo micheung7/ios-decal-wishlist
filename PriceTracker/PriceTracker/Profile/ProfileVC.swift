@@ -16,8 +16,14 @@ class ProfileVC: UIViewController{//, UITableViewDataSource, UITableViewDelegate
     @IBOutlet weak var profileImage: UIImageView!
     
     
+    @IBAction func Add(_ sender: Any) {
+        performSegue(withIdentifier: "profile-addentry", sender: self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 //        tableView.delegate = self
 //        tableView.dataSource = self
         
