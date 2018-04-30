@@ -23,7 +23,7 @@ class Item {
     var itemColor: String
     
     // ID of the post, generated automatically on Firebase
-    var postID: String
+    var itemID: String
     //var itemAddress
     
     // Designated initializer for posts
@@ -32,12 +32,12 @@ class Item {
     //      - itemURL: Optional website link to the product page
     //      - itemSize:
     //      - itemColor:
-    //      - postID:
-    init(itemName: String, itemURL: String, itemSize: String, itemColor: String, postID: String) {
+    //      - itemID:
+    init(itemName: String, itemURL: String, itemSize: String, itemColor: String, itemID: String) {
         self.itemName = itemName
         self.itemURL = itemURL
         self.itemSize = itemSize
         self.itemColor = itemColor
-        self.postID = postID
+        self.itemID = itemID
     }
 }
