@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class PeopleSearchVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
@@ -14,7 +16,7 @@ class PeopleSearchVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var results: [String] = []
     var currentResults : [String] = [] // update table
-    var usernameToSend : String = ""
+    var emailToSend : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +25,24 @@ class PeopleSearchVC: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.dataSource = self
         tableView.delegate = self
         searchBar.delegate = self
-        results = getUsernames()
-        currentResults = results
+        getUserEmails()
+    }
+    
+    func getUserEmails() {
+        var userEmails: [String] = []
+        let dbRef = Database.database().reference()
+        dbRef.child(firUsersNode).observeSingleEvent(of: .value, with: { (snapshot) in
+            if snapshot.exists() {
+                if let userids = snapshot.value as? [String:AnyObject] {
+                    for key in userids.keys {
+                        userEmails.append(userids[key]![firEmailNode] as! String)
+                    }
+                    self.results = userEmails
+                    self.currentResults = self.results
+                    self.tableView.reloadData()
+                }
+            }
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,7 +59,7 @@ class PeopleSearchVC: UIViewController, UITableViewDataSource, UITableViewDelega
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? PeopleSearchTableViewCell else {
             return UITableViewCell()
         }
-        cell.usernameLabel.text = currentResults[indexPath.row]
+        cell.emailLabel.text = currentResults[indexPath.row]
         return cell
     }
     
@@ -50,7 +68,7 @@ class PeopleSearchVC: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        usernameToSend = getUsernames()[indexPath.row]
+        emailToSend = currentResults[indexPath.row]
         performSegue(withIdentifier: "search-usercopy", sender: self)
     }
     
@@ -69,7 +87,7 @@ class PeopleSearchVC: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let VCHeadedTo = segue.destination as? UserCopyVC {
-            VCHeadedTo.usernameFromPeopleSearch = usernameToSend
+            VCHeadedTo.emailFromPeopleSearch = emailToSend
         }
     }
     

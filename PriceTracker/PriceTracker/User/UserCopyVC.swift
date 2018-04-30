@@ -14,7 +14,7 @@ class UserCopyVC: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var followUnfollowButton: UIButton!
     
-    var usernameFromPeopleSearch : String = ""
+    var emailFromPeopleSearch : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
