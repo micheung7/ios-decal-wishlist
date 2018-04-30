@@ -12,11 +12,16 @@ import Foundation
 // TODO: make segues and remember to add it here!!!
 
 // Firebase database strings
-let firUsersNode = "Users"
-let firReadPostsNode = "readPosts"
-let firPostsNode = "Posts"
+let firUsersNode = "users"
 let firUsernameNode = "username"
-let firThreadNode = "thread"
-let firDateNode = "date"
-let firImagePathNode = "imagePath"
-let firStorageImagesPath = "Images"
+let firEmailNode = "email"
+let firFriendListNode = "friendList"
+let firItemListNode = "itemList"
+
+let firItemsNode = "items"
+let firItemIDNode = "itemid"
+let firItemNameNode = "itemName"
+let firLinkNode = "link"
+let firSizeNode = "size"
+let firColorNode = "color"
+let firAddressNode = "address"
