@@ -14,7 +14,7 @@ import MBProgressHUD
 class ProfileVC: UIViewController{//, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileImage: UIImageView!
-    //@IBOutlet weak var addItem: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

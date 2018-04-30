@@ -59,7 +59,7 @@ class AddEntryVC: UIViewController {
                                              "link" : itemLink,
                                              "size": itemSize,
                                              "color": itemColor]
-        let newadItemRef = dbRef.child("items").childByAutoId()
+        let newItemRef = dbRef.child("items").childByAutoId()
         let newItemId = newItemRef.key
         newItemRef.setValue(itemAttr)
         
