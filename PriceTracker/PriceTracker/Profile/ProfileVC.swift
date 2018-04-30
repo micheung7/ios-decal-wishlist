@@ -99,6 +99,11 @@ class ProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        getUserItemID()
+        setItems()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

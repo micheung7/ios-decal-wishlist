@@ -106,6 +106,11 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        getUserInfo()
+        getItems()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
