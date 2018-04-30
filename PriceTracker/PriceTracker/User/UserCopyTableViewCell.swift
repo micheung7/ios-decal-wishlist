@@ -10,6 +10,7 @@ import UIKit
 
 class UserCopyTableViewCell: UITableViewCell {
     // Connect outlets
+    @IBOutlet weak var itemNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
