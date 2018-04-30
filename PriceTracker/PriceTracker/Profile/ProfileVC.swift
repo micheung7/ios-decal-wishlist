@@ -66,7 +66,7 @@ class ProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                         tempSize = snapshot.childSnapshot(forPath: "size").value! as! String
                         tempColor = snapshot.childSnapshot(forPath: "color").value! as! String
                         tempLink = snapshot.childSnapshot(forPath: "link").value! as! String
-                        let holder = Item.init(itemName: tempName, itemURL: tempLink, itemSize: tempSize, itemColor: tempColor, postID: ID)
+                        let holder = Item.init(itemName: tempName, itemURL: tempLink, itemSize: tempSize, itemColor: tempColor, itemID: ID)
                         tempItems.append(holder)
                     }
                 }
