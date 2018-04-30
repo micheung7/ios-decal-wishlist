@@ -15,10 +15,17 @@ class ItemCopyVC: UIViewController {
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var notesLabel: UILabel!
     
+    var itemNameFromUserCopy: String = ""
+    var itemURLFromUserCopy: String = ""
+    var itemSizeFromUserCopy: String = ""
+    var itemColorFromUserCopy: String = ""
+    var itemIDFromUserCopy: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        itemNameLabel.text = itemNameFromUserCopy
+        sizeLabel.text = itemSizeFromUserCopy
+        colorLabel.text = itemColorFromUserCopy
     }
 
     override func didReceiveMemoryWarning() {
