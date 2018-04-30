@@ -22,12 +22,7 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var friendList: [String] = [] // List of user ids
     var itemList: [String] = [] // List of item ids
     var items: [Item] = []
-    
-    var itemNameToSend: String = ""
-    var itemURLToSend: String = ""
-    var itemSizeToSend: String = ""
-    var itemColorToSend: String = ""
-    var itemIDToSend: String = ""
+    var itemToSend: Item? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +48,6 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                             self.itemList = (user[firItemListNode] as? [String])!
                         }
                     }
-                    self.tableView.reloadData()
                 }
             }
         })
@@ -64,6 +58,7 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         dbRef.child(firItemsNode).observeSingleEvent(of: .value, with: { (snapshot) in
             if snapshot.exists() {
                 if let itemids = snapshot.value as? [String:AnyObject] {
+                    self.items = []
                     for key in itemids.keys {
                         if self.itemList.contains(key) {
                             let item = itemids[key]!
@@ -96,7 +91,6 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         cell.itemNameLabel.text = items[indexPath.row].itemName
-        print("itemNameLabel.text", cell.itemNameLabel.text!)
         return cell
     }
     
@@ -105,22 +99,20 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        itemNameToSend = items[indexPath.row].itemName
-        itemURLToSend = items[indexPath.row].itemURL
-        itemSizeToSend = items[indexPath.row].itemSize
-        itemColorToSend = items[indexPath.row].itemColor
-        itemIDToSend = items[indexPath.row].itemID
+        itemToSend = items[indexPath.row]
         performSegue(withIdentifier: "usercopy-itemcopy", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let VCHeadedTo = segue.destination as? ItemCopyVC {
-            VCHeadedTo.itemNameFromUserCopy = itemNameToSend
-            VCHeadedTo.itemURLFromUserCopy = itemURLToSend
-            VCHeadedTo.itemSizeFromUserCopy = itemSizeToSend
-            VCHeadedTo.itemColorFromUserCopy = itemColorToSend
-            VCHeadedTo.itemIDFromUserCopy = itemIDToSend
+            VCHeadedTo.itemFromUserCopy = itemToSend
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getUserInfo()
+        getItems()
+        self.tableView.reloadData()
     }
     
     /*

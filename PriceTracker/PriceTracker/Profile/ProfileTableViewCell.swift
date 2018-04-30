@@ -10,8 +10,6 @@ import UIKit
 
 class ProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var itemNameLabel: UILabel!
-    @IBOutlet weak var sizeLabel: UILabel!
-    @IBOutlet weak var colorLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

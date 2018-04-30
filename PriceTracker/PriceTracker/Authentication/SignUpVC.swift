@@ -75,7 +75,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                     self.dbRef.child("users").child((user?.uid)!).child("friendList").setValue(friends)
                     self.dbRef.child("users").child((user?.uid)!).child("itemList").setValue(itemList)
                     
-//                    self.dbRef.child("items").childByAutoId().child("itemname").setValue("My Cool Shoes")
+//                    self.dbRef.child("items").childByAutoId().child("name").setValue("My Cool Shoes")
 //                    self.dbRef.child("items").childByAutoId().child("link").setValue("None")
 //                    self.dbRef.child("items").childByAutoId().child("size").setValue("M")
 //                    self.dbRef.child("items").childByAutoId().child("color").setValue("blizzard blue")

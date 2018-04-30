@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -718,7 +718,7 @@
                                 <rect key="frame" x="0.0" y="261" width="375" height="406"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="72" id="rty-CL-QOg" customClass="ProfileTableViewCell" customModule="PriceTracker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="72" id="rty-CL-QOg" customClass="ProfileTableViewCell" customModule="PriceTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rty-CL-QOg" id="ZHP-uf-usK">
@@ -731,32 +731,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Lv-Cr-Vtd">
-                                                    <rect key="frame" x="15" y="25" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E97-gd-ihn">
-                                                    <rect key="frame" x="15" y="40" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="E97-gd-ihn" firstAttribute="leading" secondItem="ZHP-uf-usK" secondAttribute="leading" constant="25" id="69i-U1-gpN"/>
-                                                <constraint firstItem="0Lv-Cr-Vtd" firstAttribute="leading" secondItem="ZHP-uf-usK" secondAttribute="leading" constant="25" id="KWa-03-GtF"/>
                                                 <constraint firstItem="h9A-Rs-nwK" firstAttribute="top" secondItem="ZHP-uf-usK" secondAttribute="top" constant="10" id="NpU-4M-m9f"/>
-                                                <constraint firstItem="E97-gd-ihn" firstAttribute="top" secondItem="0Lv-Cr-Vtd" secondAttribute="bottom" constant="10" id="ana-Rv-WeX"/>
-                                                <constraint firstItem="0Lv-Cr-Vtd" firstAttribute="top" secondItem="h9A-Rs-nwK" secondAttribute="bottom" constant="10" id="o2a-HU-oxW"/>
                                                 <constraint firstItem="h9A-Rs-nwK" firstAttribute="leading" secondItem="ZHP-uf-usK" secondAttribute="leading" constant="25" id="oRE-6A-Qzs"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="colorLabel" destination="E97-gd-ihn" id="OTl-TH-Ie1"/>
                                             <outlet property="itemNameLabel" destination="h9A-Rs-nwK" id="8v4-10-O4q"/>
-                                            <outlet property="sizeLabel" destination="0Lv-Cr-Vtd" id="sEV-el-3VH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -948,8 +930,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uB-cv-Ssn">
-                                <rect key="frame" x="25" y="467" width="45.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uB-cv-Ssn">
+                                <rect key="frame" x="25" y="467" width="31.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -994,7 +976,7 @@
                         <outlet property="deleteEditButton" destination="oma-4Y-Hel" id="5nP-4v-GWQ"/>
                         <outlet property="itemImage" destination="ZnD-Uh-tss" id="n7t-ty-et4"/>
                         <outlet property="itemNameLabel" destination="sYf-QL-rEm" id="Drc-5s-bx4"/>
-                        <outlet property="notesLabel" destination="9uB-cv-Ssn" id="fg0-4t-LN5"/>
+                        <outlet property="linkLabel" destination="9uB-cv-Ssn" id="kml-Ab-A0k"/>
                         <outlet property="sizeLabel" destination="0D1-hh-R7t" id="7gA-Z3-89E"/>
                     </connections>
                 </viewController>
@@ -1127,7 +1109,7 @@
         <image name="icons8-user-groups-25.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fFw-KU-6qb"/>
+        <segue reference="iAU-2s-1f1"/>
         <segue reference="NCj-hI-lyn"/>
         <segue reference="Nl6-c5-XIM"/>
     </inferredMetricsTieBreakers>

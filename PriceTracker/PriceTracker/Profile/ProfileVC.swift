@@ -16,61 +16,55 @@ class ProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileImage: UIImageView!
     
+    var IDList: [String] = []
+    var ItemList: [Item] = []
+    var itemToSend: Item? = nil
     
     @IBAction func Add(_ sender: Any) {
         performSegue(withIdentifier: "profile-addentry", sender: self)
     }
-    
-    var IDList: [String] = []
-    var ItemList: [Item] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         getUserItemID()
         setItems()
-
-        // Do any additional setup after loading the view.
     }
     
+    
     func getUserItemID() {
-        var tempID: [String] = []
         let dbRef = Database.database().reference()
         let userID = Auth.auth().currentUser?.uid
-        dbRef.child(firUsersNode).child(userID!).child("itemList").observeSingleEvent(of: .value, with: { (snapshot) in
+        dbRef.child(firUsersNode).observeSingleEvent(of: .value, with: { (snapshot) in
             if snapshot.exists() {
-                if let itemID = snapshot.value as? [String] {
-                    for ID in itemID {
-                        tempID.append(ID)
-                    }
-                    self.IDList = tempID
+                if let userids = snapshot.value as? [String:AnyObject] {
+                    let user = userids[userID!]!
+                    self.IDList = (user[firItemListNode] as? [String])!
                 }
             }
         })
     }
     
     func setItems() {
-        var tempItems: [Item] = []
-        var tempName: String!
-        var tempSize: String!
-        var tempColor: String!
-        var tempLink: String!
         let dbRef = Database.database().reference()
-        dbRef.child("items").observeSingleEvent(of: .value, with: {(snapshot) in
+        dbRef.child(firItemsNode).observeSingleEvent(of: .value, with: {(snapshot) in
             if snapshot.exists() {
-                if let ID = snapshot.value as? String {
-                    if self.IDList.contains(ID) {
-                        tempName = snapshot.childSnapshot(forPath: "itemname").value! as! String
-                        tempSize = snapshot.childSnapshot(forPath: "size").value! as! String
-                        tempColor = snapshot.childSnapshot(forPath: "color").value! as! String
-                        tempLink = snapshot.childSnapshot(forPath: "link").value! as! String
-                        let holder = Item.init(itemName: tempName, itemURL: tempLink, itemSize: tempSize, itemColor: tempColor, itemID: ID)
-                        tempItems.append(holder)
+                if let itemids = snapshot.value as? [String:AnyObject] {
+                    self.ItemList = []
+                    for key in itemids.keys {
+                        if self.IDList.contains(key) {
+                            let item = itemids[key]!
+                            let color = item[firColorNode] as? String
+                            let itemname = item[firItemNameNode] as? String
+                            let link = item[firLinkNode] as? String
+                            let size = item[firSizeNode] as? String
+                            let currItem = Item(itemName: itemname!, itemURL: link!, itemSize: size!, itemColor: color!, itemID: key)
+                            self.ItemList.append(currItem)
+                        }
                     }
+                    self.tableView.reloadData()
                 }
-                self.ItemList = tempItems
             }
         })
     }
@@ -85,8 +79,6 @@ class ProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         cell.itemNameLabel.text = ItemList[indexPath.row].itemName
-        cell.sizeLabel.text = ItemList[indexPath.row].itemSize
-        cell.colorLabel.text = ItemList[indexPath.row].itemColor
         return cell
     }
     
@@ -95,11 +87,20 @@ class ProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "profile-addentry", sender: self)
+        itemToSend = ItemList[indexPath.row]
+        performSegue(withIdentifier: "profile-itemedit", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let VCHeadedTo = segue.destination as? ItemEditVC {
+            VCHeadedTo.itemFromProfile = itemToSend
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
+        getUserItemID()
+        setItems()
+        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
