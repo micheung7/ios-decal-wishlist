@@ -65,10 +65,10 @@ class AddEntryVC: UIViewController {
         let currentUserID = Auth.auth().currentUser?.uid
         
         // Creating a new item id with attributes
-        let itemAttr : [String:String] = ["name" : itemName,
-                                             "link" : itemLink,
-                                             "size": itemSize,
-                                             "color": itemColor]
+        let itemAttr : [String:String] = [firItemNameNode: itemName,
+                                             firLinkNode: itemLink,
+                                             firSizeNode: itemSize,
+                                             firColorNode: itemColor]
         let newItemRef = dbRef.child("items").childByAutoId()
         let newItemId = newItemRef.key
         newItemRef.setValue(itemAttr)

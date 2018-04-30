@@ -35,6 +35,7 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.delegate = self
         userEmail = emailFromPeopleSearch
         getUserInfo()
+        getItems()
     }
     
     func getUserInfo() {
@@ -52,7 +53,7 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                             self.itemList = (user[firItemListNode] as? [String])!
                         }
                     }
-                    
+                    self.tableView.reloadData()
                 }
             }
         })
@@ -74,7 +75,7 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                             self.items.append(currItem)
                         }
                     }
-                    
+                    self.tableView.reloadData()
                 }
             }
         })
@@ -87,7 +88,7 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemList.count
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -95,6 +96,7 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         cell.itemNameLabel.text = items[indexPath.row].itemName
+        print("itemNameLabel.text", cell.itemNameLabel.text!)
         return cell
     }
     

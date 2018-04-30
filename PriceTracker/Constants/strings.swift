@@ -20,6 +20,6 @@ let firItemListNode = "itemList"
 
 let firItemsNode = "items"
 let firColorNode = "color"
-let firItemNameNode = "itemname"
+let firItemNameNode = "name"
 let firLinkNode = "link"
 let firSizeNode = "size"

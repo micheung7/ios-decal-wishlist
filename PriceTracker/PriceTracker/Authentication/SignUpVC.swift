@@ -60,10 +60,10 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                     let newItemRef = self.dbRef.child("items").childByAutoId()
                     let newItemId = newItemRef.key
                     let newItemData = [
-                        "itemname" : "My Cool Shoes",
-                        "link" : "None",
-                        "size" : "M",
-                        "color" : "blizzard blue"]
+                        firItemNameNode : "My Cool Shoes",
+                        firLinkNode : "None",
+                        firSizeNode : "M",
+                        firColorNode : "blizzard blue"]
                     newItemRef.setValue(newItemData)
                     itemList[0] = newItemId
                     

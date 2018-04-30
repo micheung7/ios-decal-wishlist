@@ -13,7 +13,7 @@ class ItemCopyVC: UIViewController {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var sizeLabel: UILabel!
     @IBOutlet weak var colorLabel: UILabel!
-    @IBOutlet weak var notesLabel: UILabel!
+    @IBOutlet weak var linkLabel: UILabel!
     
     var itemNameFromUserCopy: String = ""
     var itemURLFromUserCopy: String = ""
@@ -26,6 +26,7 @@ class ItemCopyVC: UIViewController {
         itemNameLabel.text = itemNameFromUserCopy
         sizeLabel.text = itemSizeFromUserCopy
         colorLabel.text = itemColorFromUserCopy
+        linkLabel.text = itemURLFromUserCopy
     }
 
     override func didReceiveMemoryWarning() {
