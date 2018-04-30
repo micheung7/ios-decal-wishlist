@@ -32,7 +32,6 @@ class ProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         setItems()
     }
     
-    
     func getUserItemID() {
         let dbRef = Database.database().reference()
         let userID = Auth.auth().currentUser?.uid
@@ -63,7 +62,10 @@ class ProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                             self.ItemList.append(currItem)
                         }
                     }
-                    self.tableView.reloadData()
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                    
                 }
             }
         })
@@ -96,16 +98,9 @@ class ProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             VCHeadedTo.itemFromProfile = itemToSend
         }
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        getUserItemID()
-        setItems()
-        self.tableView.reloadData()
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 

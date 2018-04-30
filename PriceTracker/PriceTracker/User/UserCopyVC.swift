@@ -70,15 +70,12 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                             self.items.append(currItem)
                         }
                     }
-                    self.tableView.reloadData()
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
                 }
             }
         })
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // Table View
@@ -109,10 +106,8 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        getUserInfo()
-        getItems()
-        self.tableView.reloadData()
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     /*
