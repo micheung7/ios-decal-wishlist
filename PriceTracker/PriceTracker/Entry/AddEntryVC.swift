@@ -30,6 +30,7 @@ class AddEntryVC: UIViewController {
     var size = String()
     var color = String()
     
+    var itemIds = [String]()
     
     @IBAction func Save(_ sender: Any) {
         name = itemNameTextField.text!
@@ -43,6 +44,15 @@ class AddEntryVC: UIViewController {
         super.viewDidLoad()
         saveButton.setTitle("Save", for: .normal)
         // Do any additional setup after loading the view.
+        let dbRef = Database.database().reference()
+        let currentUserID = Auth.auth().currentUser?.uid
+        dbRef.child(firUsersNode).observeSingleEvent(of: .value, with: { (snapshot) in
+            if snapshot.exists() {
+                if let userids = snapshot.value as? [String:AnyObject] {
+                    self.itemIds = (userids[currentUserID!]![firItemListNode] as? [String]?)!!
+                }
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,15 +73,8 @@ class AddEntryVC: UIViewController {
         let newItemId = newItemRef.key
         newItemRef.setValue(itemAttr)
         
-        var count = [Any]()
-        dbRef.observe(.value) { snapshot in
-            for child in snapshot.children {
-                
-                count.append(child)
-            }
-        }
-        count.append(newItemId)
-        dbRef.root.child("users").child(currentUserID!).updateChildValues(["itemList" : count])
+        itemIds.append(newItemId)
+        dbRef.root.child("users").child(currentUserID!).updateChildValues(["itemList" : itemIds])
         // Now add the item id to the itemList of current user
         
     }

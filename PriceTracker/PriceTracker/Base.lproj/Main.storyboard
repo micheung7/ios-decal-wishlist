@@ -358,7 +358,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="itemNameLabel" destination="ATp-ZA-vaC" id="tRY-p6-Rby"/>
-                                            <segue destination="ACd-Hk-SGY" kind="show" identifier="usercopy-itemcopy" id="fTf-tI-PCK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -384,6 +383,7 @@
                         <outlet property="tableView" destination="5Fk-a7-Pe1" id="1NR-pz-v8U"/>
                         <outlet property="userImage" destination="AnD-cg-diw" id="YvH-gW-vwH"/>
                         <outlet property="usernameLabel" destination="qLe-6V-c6t" id="kRu-ys-Nh8"/>
+                        <segue destination="ACd-Hk-SGY" kind="show" identifier="usercopy-itemcopy" id="nNc-PY-tgL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bdD-Y6-EQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
