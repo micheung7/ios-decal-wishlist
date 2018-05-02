@@ -10,6 +10,8 @@ import UIKit
 
 class FriendFeedTableViewCell: UITableViewCell {
     // Connect outlets
+    @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

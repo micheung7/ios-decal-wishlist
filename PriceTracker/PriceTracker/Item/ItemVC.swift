@@ -13,12 +13,16 @@ class ItemVC: UIViewController {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var sizeLabel: UILabel!
     @IBOutlet weak var colorLabel: UILabel!
-    @IBOutlet weak var notesLabel: UILabel!
+    @IBOutlet weak var linkLabel: UILabel!
+    
+    var itemFromUser: Item? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        itemNameLabel.text = itemFromUser?.itemName
+        sizeLabel.text = itemFromUser?.itemSize
+        colorLabel.text = itemFromUser?.itemColor
+        linkLabel.text = itemFromUser?.itemURL
     }
 
     override func didReceiveMemoryWarning() {
