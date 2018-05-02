@@ -411,7 +411,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A1C3DBCE206AE45A00CC213C /* Build configuration list for PBXProject "WishList" */;
+			buildConfigurationList = A1C3DBCE206AE45A00CC213C /* Build configuration list for PBXProject "PriceTracker" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -820,7 +820,7 @@
 				DEVELOPMENT_TEAM = 84LH7X78WM;
 				INFOPLIST_FILE = PriceTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Emily-Hill.WishList";
+				PRODUCT_BUNDLE_IDENTIFIER = "Emily-Hill.PriceTracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -836,7 +836,7 @@
 				DEVELOPMENT_TEAM = 84LH7X78WM;
 				INFOPLIST_FILE = PriceTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Emily-Hill.WishList";
+				PRODUCT_BUNDLE_IDENTIFIER = "Emily-Hill.PriceTracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -912,7 +912,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1C3DBCE206AE45A00CC213C /* Build configuration list for PBXProject "WishList" */ = {
+		A1C3DBCE206AE45A00CC213C /* Build configuration list for PBXProject "PriceTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1C3DBF9206AE45B00CC213C /* Debug */,
