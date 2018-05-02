@@ -7,14 +7,37 @@
 //
 
 import UIKit
-import FirebaseDatabase
+import Foundation
 import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
 
 class UserVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var followUnfollowButton: UIButton!
+    
+    @IBAction func follow(_ sender: Any) {
+        addFriend(uid: friendIDFromFriendFeed)
+        // if friendList.contains(friendIDFromFriendFeed) {
+        followUnfollowButton.setTitle("Following", for: .normal)
+        //}
+        //followUnfollowButton.setTitle("Following", for: .normal)
+    }
+    
+    
+    
+    func addFriend(uid: String){
+        let dbRef = Database.database().reference()
+        let currentUserID = Auth.auth().currentUser?.uid
+        if !friendList.contains(uid) {
+            friendList.append(uid)
+            dbRef.root.child("users").child(currentUserID!).updateChildValues(["friendList": friendList])
+        }
+        // Now add the item id to the itemList of current user
+        
+    }
     
     var friendIDFromFriendFeed: String = ""
     var uid: String = ""
@@ -24,15 +47,23 @@ class UserVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var itemList: [String] = [] // List of item ids
     var items: [Item] = []
     var itemToSend: Item? = nil
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         tableView.dataSource = self
         tableView.delegate = self
         uid = friendIDFromFriendFeed
         self.userImage.image = #imageLiteral(resourceName: "shoppingCart")
         getUserInfo()
         getItems()
+        //checkFollowing()
+    }
+    
+    func checkFollowing() {
+        if friendList.contains(friendIDFromFriendFeed) {
+            followUnfollowButton.setTitle("Following", for: .normal)
+        }
     }
     
     func getUserInfo() {
@@ -45,6 +76,7 @@ class UserVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     self.usernameLabel.text = self.username
                     self.friendList = (user[firFriendListNode] as? [String])!
                     self.itemList = (user[firItemListNode] as? [String])!
+                    self.checkFollowing()
                 }
             }
         })
@@ -107,7 +139,7 @@ class UserVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         getUserInfo()
         getItems()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
