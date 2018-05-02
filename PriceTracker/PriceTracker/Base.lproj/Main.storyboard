@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TimesNewRomanBold.ttf">
+            <string>TimesNewRomanPS-BoldMT</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--LogInVC-->
         <scene sceneID="tne-QT-ifu">
@@ -328,6 +333,9 @@
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wly-rI-mqL">
                                 <rect key="frame" x="150" y="174" width="108" height="30"/>
                                 <state key="normal" title="Follow/Unfollow"/>
+                                <connections>
+                                    <action selector="follow:" destination="sxV-ZH-LTu" eventType="touchUpInside" id="Xvj-R8-KjT"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Fk-a7-Pe1">
                                 <rect key="frame" x="0.0" y="214" width="375" height="404"/>
@@ -1231,8 +1239,7 @@
         <image name="icons8-user-groups-25.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cac-WO-L94"/>
-        <segue reference="fFw-KU-6qb"/>
+        <segue reference="iAU-2s-1f1"/>
         <segue reference="NCj-hI-lyn"/>
         <segue reference="Nl6-c5-XIM"/>
     </inferredMetricsTieBreakers>

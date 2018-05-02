@@ -30,31 +30,34 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var items: [Item] = []
     var itemToSend: Item? = nil
     var friendID: String = ""
+    var myFriendList: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        uid = friendID
+        //uid = friendID
         userEmail = emailFromPeopleSearch
         self.userImage.image = #imageLiteral(resourceName: "shoppingCart")
         getUserInfo()
+        getCurrentUserInfo()
         getItems()
+        //getFriendInfo()
     }
     
     func addFriend(uid: String){
         let dbRef = Database.database().reference()
         let currentUserID = Auth.auth().currentUser?.uid
-        if !friendList.contains(uid) {
-            friendList.append(uid)
-            dbRef.root.child("users").child(currentUserID!).updateChildValues(["friendList": friendList])
+        if !myFriendList.contains(friendID) {
+            myFriendList.append(friendID)
+            dbRef.root.child("users").child(currentUserID!).updateChildValues(["friendList": myFriendList])
         }
         // Now add the item id to the itemList of current user
         
     }
     
     func checkFollowing() {
-        if friendList.contains(friendID) {
+        if myFriendList.contains(friendID) {
             followUnfollowButton.setTitle("Following", for: .normal)
         }
     }
@@ -72,6 +75,7 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                             self.usernameLabel.text = self.username
                             self.friendList = (user[firFriendListNode] as? [String])!
                             self.itemList = (user[firItemListNode] as? [String])!
+                            self.friendID = key
                             self.checkFollowing()
                         }
                     }
@@ -80,19 +84,13 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         })
     }
     
-    func getFriendInfo() {
+    func getCurrentUserInfo() {
         let dbRef = Database.database().reference()
+        let currentUserID = Auth.auth().currentUser?.uid
         dbRef.child(firUsersNode).observeSingleEvent(of: .value, with: { (snapshot) in
             if snapshot.exists() {
                 if let userids = snapshot.value as? [String:AnyObject] {
-                    for key in userids.keys {
-                        let user = userids[key]!
-                        let email = user[firEmailNode] as! String
-                        if email == self.userEmail {
-                            self.friendID = (user as? String)!
-                            self.checkFollowing()
-                        }
-                    }
+                    self.myFriendList = (userids[currentUserID!]![firFriendListNode] as? [String]?)!!
                 }
             }
         })
@@ -153,8 +151,9 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         getUserInfo()
+        //getCurrentUserInfo()
         getItems()
-        getFriendInfo()
+        //getFriendInfo()
     }
     
     override func didReceiveMemoryWarning() {
