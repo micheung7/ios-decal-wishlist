@@ -29,7 +29,7 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.delegate = self
         userEmail = emailFromPeopleSearch
-        self.userImage.image = #imageLiteral(resourceName: "shopping cart.jpg")
+        self.userImage.image = #imageLiteral(resourceName: "shoppingCart")
         getUserInfo()
         getItems()
     }
