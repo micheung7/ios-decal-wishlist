@@ -43,11 +43,6 @@ class PeopleSearchVC: UIViewController, UITableViewDataSource, UITableViewDelega
         })
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     // Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentResults.count
@@ -89,14 +84,8 @@ class PeopleSearchVC: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
 }

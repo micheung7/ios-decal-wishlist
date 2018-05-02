@@ -11,7 +11,6 @@ import FirebaseStorage
 import MBProgressHUD
 
 class CurrentUser {
-    
     var username: String!
     var id: String!
     var email: String!
