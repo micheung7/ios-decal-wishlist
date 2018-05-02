@@ -28,7 +28,7 @@ class ProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
+        self.profileImage.image = #imageLiteral(resourceName: "shopping cart.jpg")
         getUserItemID()
         setItems()
     }

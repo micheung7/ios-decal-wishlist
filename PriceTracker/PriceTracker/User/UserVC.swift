@@ -30,6 +30,7 @@ class UserVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.delegate = self
         uid = friendIDFromFriendFeed
+        self.userImage.image = #imageLiteral(resourceName: "shopping cart.jpg")
         getUserInfo()
         getItems()
     }
