@@ -39,6 +39,12 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
             present(alertController, animated: true, completion: nil)
+        } else if password != verifiedPassword {
+            let alertController = UIAlertController(title: "Verification Error.", message: "The two passwords do not match.", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            self.confirmPasswordTextField.textColor = UIColor.red
+            self.present(alertController, animated: true, completion: nil)
         } else {
             Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                 if error == nil {
@@ -75,12 +81,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                             [unowned self] (action) -> Void in
                             self.performSegue(withIdentifier: "signup-home", sender: self)
                     }))
-                    self.present(alertController, animated: true, completion: nil)
-                } else if password != verifiedPassword {
-                    let alertController = UIAlertController(title: "Verification Error.", message: "The two passwords do not match.", preferredStyle: .alert)
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(defaultAction)
-                    self.confirmPasswordTextField.textColor = UIColor.red
                     self.present(alertController, animated: true, completion: nil)
                 } else {
                     let alertController = UIAlertController(title: "Sign Up Error", message: error?.localizedDescription, preferredStyle: .alert)
