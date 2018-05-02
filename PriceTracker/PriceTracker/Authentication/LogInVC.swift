@@ -59,6 +59,13 @@ class LogInVC: UIViewController, UITextFieldDelegate {
         self.passwordTextField.delegate = self
     }
     
+    // Authenticate users automatically if they already signed in earlier.
+//    override func viewDidAppear(_ animated: Bool) {
+//        if Auth.auth().currentUser?.displayName != nil {
+//            performSegue(withIdentifier: "login-home", sender: self)
+//        }
+//    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == self.emailTextField {
             if textField.text != nil {
