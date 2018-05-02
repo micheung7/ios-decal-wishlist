@@ -72,6 +72,7 @@ class AddEntryVC: UIViewController {
         // Add the item id to the itemList of current user
         itemIds.append(newItemId)
         dbRef.root.child("users").child(currentUserID!).updateChildValues(["itemList" : itemIds])
+        performSegue(withIdentifier: "unwindSegueToVC1", sender: self)
     }
 
 }

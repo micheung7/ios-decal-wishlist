@@ -33,6 +33,8 @@ class ProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         setItems()
     }
     
+    @IBAction func unwindToVC1(segue:UIStoryboardSegue) { }
+    
     func getUserItemID() {
         let dbRef = Database.database().reference()
         let userID = Auth.auth().currentUser?.uid

@@ -942,9 +942,11 @@
                         <outlet property="saveButton" destination="F07-Vy-40z" id="xeC-es-HSo"/>
                         <outlet property="sizeLabel" destination="Cvc-Gu-JqE" id="6dk-6r-p18"/>
                         <outlet property="sizeTextField" destination="Hqy-7d-i1g" id="fvn-wF-aTN"/>
+                        <segue destination="k5h-nT-uBd" kind="unwind" identifier="unwindSegueToVC1" unwindAction="unwindToVC1WithSegue:" id="bBX-oS-Uup"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Z6-rz-UZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="k5h-nT-uBd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3228" y="-35"/>
         </scene>
