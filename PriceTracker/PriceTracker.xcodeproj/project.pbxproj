@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50B02CAD209971AD000B5C54 /* shopping cart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50B02CAC209971AD000B5C54 /* shopping cart.jpg */; };
+		50B02CAE20997F84000B5C54 /* shopping cart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50B02CB020997F84000B5C54 /* shopping cart.jpg */; };
 		84D5EC7C0FDBDD6A46367D8C /* Pods_PriceTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81B1ACCE55710D53B91EA382 /* Pods_PriceTrackerTests.framework */; };
 		9D8C600020763060003668A1 /* FriendFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C5FFF20763060003668A1 /* FriendFeedTableViewCell.swift */; };
 		9D8C600320763174003668A1 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8C600220763174003668A1 /* UserTableViewCell.swift */; };
@@ -68,7 +68,7 @@
 		334742F6F3BCE25FE4CA36C2 /* Pods-PriceTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTrackerTests/Pods-PriceTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3AC1780725132943A2D3A6FE /* Pods_PriceTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PriceTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE77F3DE88E5ADAC279616F /* Pods-PriceTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTrackerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTrackerUITests/Pods-PriceTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		50B02CAC209971AD000B5C54 /* shopping cart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "shopping cart.jpg"; path = "../../../../../Desktop/shopping cart.jpg"; sourceTree = "<group>"; };
+		50B02CAF20997F84000B5C54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Base; path = "Base.lproj/shopping cart.jpg"; sourceTree = "<group>"; };
 		5CD5C1A176E872702DABF52E /* Pods-PriceTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PriceTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-PriceTracker/Pods-PriceTracker.release.xcconfig"; sourceTree = "<group>"; };
 		81B1ACCE55710D53B91EA382 /* Pods_PriceTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PriceTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D8C5FFF20763060003668A1 /* FriendFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFeedTableViewCell.swift; sourceTree = "<group>"; };
@@ -243,7 +243,7 @@
 			children = (
 				A1717373208BEF6B009CCEF6 /* WishList Logo.png */,
 				A171736F208BEDE4009CCEF6 /* icons8-customer-50 (1).png */,
-				50B02CAC209971AD000B5C54 /* shopping cart.jpg */,
+				50B02CB020997F84000B5C54 /* shopping cart.jpg */,
 				A1717370208BEDE4009CCEF6 /* icons8-user-groups-25.png */,
 			);
 			path = Images;
@@ -441,7 +441,7 @@
 			files = (
 				A1C3DBE1206AE45A00CC213C /* LaunchScreen.storyboard in Resources */,
 				A1717359208BCF96009CCEF6 /* GoogleService-Info.plist in Resources */,
-				50B02CAD209971AD000B5C54 /* shopping cart.jpg in Resources */,
+				50B02CAE20997F84000B5C54 /* shopping cart.jpg in Resources */,
 				A1717371208BEDE5009CCEF6 /* icons8-customer-50 (1).png in Resources */,
 				A1717372208BEDE5009CCEF6 /* icons8-user-groups-25.png in Resources */,
 				A1717374208BEF6C009CCEF6 /* WishList Logo.png in Resources */,
@@ -689,6 +689,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		50B02CB020997F84000B5C54 /* shopping cart.jpg */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50B02CAF20997F84000B5C54 /* Base */,
+			);
+			name = "shopping cart.jpg";
+			path = ../../../../../Desktop;
+			sourceTree = "<group>";
+		};
 		A1C3DBDA206AE45A00CC213C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
