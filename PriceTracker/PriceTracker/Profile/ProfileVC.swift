@@ -28,6 +28,7 @@ class ProfileVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
         getUserItemID()
         setItems()
     }
