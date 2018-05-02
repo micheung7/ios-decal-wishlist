@@ -9,7 +9,6 @@
 import UIKit
 
 class UserCopyTableViewCell: UITableViewCell {
-    // Connect outlets
     @IBOutlet weak var itemNameLabel: UILabel!
     
     override func awakeFromNib() {
@@ -19,7 +18,6 @@ class UserCopyTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 

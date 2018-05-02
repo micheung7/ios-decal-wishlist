@@ -30,9 +30,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
     
     /* Actions following pressing the Sign up button. */
     @IBAction func signUpPressed(_ sender: UIButton) {
-        //TODO:
-        //connect action with storyboard item
-        //Refer to signUpViewController file in the last Snapchat lab for reference
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
         guard let name = usernameTextField.text else { return }
@@ -42,7 +39,12 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(defaultAction)
             present(alertController, animated: true, completion: nil)
-            
+        } else if password != verifiedPassword {
+            let alertController = UIAlertController(title: "Verification Error.", message: "The two passwords do not match.", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            self.confirmPasswordTextField.textColor = UIColor.red
+            self.present(alertController, animated: true, completion: nil)
         } else {
             Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                 if error == nil {
@@ -52,12 +54,10 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                         { (err) in
                     })
                     
-                    
-                    var friends = [user?.uid]
+                    let friends = [user?.uid]
                     var itemList = [""]
-                
                     
-                    let newItemRef = self.dbRef.child("items").childByAutoId()
+                    let newItemRef = self.dbRef.child(firItemsNode).childByAutoId()
                     let newItemId = newItemRef.key
                     let newItemData = [
                         firItemNameNode : "My Cool Shoes",
@@ -67,20 +67,13 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                     newItemRef.setValue(newItemData)
                     itemList[0] = newItemId
                     
-                    let newUserRef = self.dbRef.child("users").child((user?.uid)!)
+                    let newUserRef = self.dbRef.child(firUsersNode).child((user?.uid)!)
                     let newUserData = [
-                        "username" : self.userName,
-                        "email" : self.userEmail]
+                        firUsernameNode : self.userName,
+                        firEmailNode : self.userEmail]
                     newUserRef.setValue(newUserData)
-                    self.dbRef.child("users").child((user?.uid)!).child("friendList").setValue(friends)
-                    self.dbRef.child("users").child((user?.uid)!).child("itemList").setValue(itemList)
-                    
-//                    self.dbRef.child("items").childByAutoId().child("name").setValue("My Cool Shoes")
-//                    self.dbRef.child("items").childByAutoId().child("link").setValue("None")
-//                    self.dbRef.child("items").childByAutoId().child("size").setValue("M")
-//                    self.dbRef.child("items").childByAutoId().child("color").setValue("blizzard blue")
-                    
-                    
+                    self.dbRef.child(firUsersNode).child((user?.uid)!).child(firFriendListNode).setValue(friends)
+                    self.dbRef.child(firUsersNode).child((user?.uid)!).child(firItemListNode).setValue(itemList)
                     
                     let alertController = UIAlertController(title: "Congratulations!", message: "You have successfully signed up", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Okay", style: .default, handler:
@@ -88,12 +81,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
                             [unowned self] (action) -> Void in
                             self.performSegue(withIdentifier: "signup-home", sender: self)
                     }))
-                    self.present(alertController, animated: true, completion: nil)
-                } else if password != verifiedPassword {
-                    let alertController = UIAlertController(title: "Verification Error.", message: "The two passwords do not match.", preferredStyle: .alert)
-                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(defaultAction)
-                    self.confirmPasswordTextField.textColor = UIColor.red
                     self.present(alertController, animated: true, completion: nil)
                 } else {
                     let alertController = UIAlertController(title: "Sign Up Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -105,19 +92,13 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.logoImage.image = #imageLiteral(resourceName: "WishList Logo.png")
         self.usernameTextField.delegate = self
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         self.confirmPasswordTextField.delegate = self
-        
-
-
-        // Do any additional setup after loading the view.
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -142,18 +123,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

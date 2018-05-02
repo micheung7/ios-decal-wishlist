@@ -21,9 +21,6 @@ class AddEntryVC: UIViewController {
     @IBOutlet weak var sizeTextField: UITextField!
     @IBOutlet weak var colorLabel: UILabel!
     @IBOutlet weak var colorTextField: UITextField!
-    @IBOutlet weak var notesLabel: UILabel!
-    @IBOutlet weak var notesTextField: UITextView!
-    
     
     var name = String()
     var link = String()
@@ -57,14 +54,13 @@ class AddEntryVC: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func addItem(itemName: String, itemLink: String, itemSize: String, itemColor: String) {
         let dbRef = Database.database().reference()
         let currentUserID = Auth.auth().currentUser?.uid
         
-        // Creating a new item id with attributes
+        // Create a new item id with attributes
         let itemAttr : [String:String] = [firItemNameNode: itemName,
                                              firLinkNode: itemLink,
                                              firSizeNode: itemSize,
@@ -73,21 +69,9 @@ class AddEntryVC: UIViewController {
         let newItemId = newItemRef.key
         newItemRef.setValue(itemAttr)
         
+        // Add the item id to the itemList of current user
         itemIds.append(newItemId)
         dbRef.root.child("users").child(currentUserID!).updateChildValues(["itemList" : itemIds])
-        // Now add the item id to the itemList of current user
-        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

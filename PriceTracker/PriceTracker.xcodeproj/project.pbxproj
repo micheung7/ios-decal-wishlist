@@ -31,7 +31,6 @@
 		A1717371208BEDE5009CCEF6 /* icons8-customer-50 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = A171736F208BEDE4009CCEF6 /* icons8-customer-50 (1).png */; };
 		A1717372208BEDE5009CCEF6 /* icons8-user-groups-25.png in Resources */ = {isa = PBXBuildFile; fileRef = A1717370208BEDE4009CCEF6 /* icons8-user-groups-25.png */; };
 		A1717374208BEF6C009CCEF6 /* WishList Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A1717373208BEF6B009CCEF6 /* WishList Logo.png */; };
-		A1717376208BF985009CCEF6 /* UserDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1717375208BF984009CCEF6 /* UserDatabase.swift */; };
 		A18CA3662091781B0097EA96 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18CA3652091781B0097EA96 /* Item.swift */; };
 		A1911E272086BF9800F8F77E /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1911E262086BF9800F8F77E /* strings.swift */; };
 		A1C3DBD7206AE45A00CC213C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C3DBD6206AE45A00CC213C /* AppDelegate.swift */; };
@@ -93,7 +92,6 @@
 		A171736F208BEDE4009CCEF6 /* icons8-customer-50 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-customer-50 (1).png"; sourceTree = "<group>"; };
 		A1717370208BEDE4009CCEF6 /* icons8-user-groups-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-user-groups-25.png"; sourceTree = "<group>"; };
 		A1717373208BEF6B009CCEF6 /* WishList Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WishList Logo.png"; sourceTree = "<group>"; };
-		A1717375208BF984009CCEF6 /* UserDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDatabase.swift; sourceTree = "<group>"; };
 		A18CA3652091781B0097EA96 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A1911E262086BF9800F8F77E /* strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
 		A1C3DBD3206AE45A00CC213C /* PriceTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PriceTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,7 +250,6 @@
 			isa = PBXGroup;
 			children = (
 				9DD20A9A2091729F0012184D /* CurrentUser.swift */,
-				A1717375208BF984009CCEF6 /* UserDatabase.swift */,
 				A1911E262086BF9800F8F77E /* strings.swift */,
 				A18CA3652091781B0097EA96 /* Item.swift */,
 			);
@@ -639,7 +636,6 @@
 				A1C3DBD9206AE45A00CC213C /* ViewController.swift in Sources */,
 				A1911E272086BF9800F8F77E /* strings.swift in Sources */,
 				9DAD28FD2075BEAE00C90CCE /* SignUpVC.swift in Sources */,
-				A1717376208BF985009CCEF6 /* UserDatabase.swift in Sources */,
 				9D8C600620763329003668A1 /* PeopleSearchTableViewCell.swift in Sources */,
 				9DAD290F2075C28D00C90CCE /* UserCopyVC.swift in Sources */,
 				9D8C600020763060003668A1 /* FriendFeedTableViewCell.swift in Sources */,

@@ -19,12 +19,8 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     var userEmail = ""
     var userPassword = ""
 
-    
     /* Action that follows pressing the login button */
     @IBAction func logInPressed(_ sender: UIButton) {
-        //TODO:
-        //Connect the IBAction
-        //Fille out the Code. Refer to most recent Snapchat Clone's Log In View Controller
         guard let emailText = emailTextField.text else { return }
         guard let passwordText = passwordTextField.text else { return }
         
@@ -53,22 +49,22 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     
     /* Action that follows pressing the sign Up button */
     @IBAction func signUpPressed(_ sender: UIButton) {
-        //TODO:
-        //connect the Action, make an identifier for the segue, uncomment line below with the name of the segue filled in
-        //performSegue(withIdentifier:[NAME THIS SEGUE], sender: self)
         performSegue(withIdentifier: "login-signup", sender: self)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.logoImage.image = #imageLiteral(resourceName: "WishList Logo.png")
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
-
-
-        // Do any additional setup after loading the view.
     }
+    
+    // Authenticate users automatically if they already signed in earlier.
+//    override func viewDidAppear(_ animated: Bool) {
+//        if Auth.auth().currentUser?.displayName != nil {
+//            performSegue(withIdentifier: "login-home", sender: self)
+//        }
+//    }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == self.emailTextField {
@@ -82,21 +78,8 @@ class LogInVC: UIViewController, UITextFieldDelegate {
         }
     }
 
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
