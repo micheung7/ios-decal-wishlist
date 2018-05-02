@@ -17,7 +17,7 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var followUnfollowButton: UIButton!
     
     @IBAction func follow(_ sender: Any) {
-        addFriend(uid: friendIDFromFriendFeed)
+        addFriend(uid: friendID)
         followUnfollowButton.setTitle("Following", for: .normal)
     }
     
@@ -29,13 +29,13 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var itemList: [String] = [] // List of item ids
     var items: [Item] = []
     var itemToSend: Item? = nil
-    var friendIDFromFriendFeed: String = ""
+    var friendID: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        uid = friendIDFromFriendFeed
+        uid = friendID
         userEmail = emailFromPeopleSearch
         self.userImage.image = #imageLiteral(resourceName: "shoppingCart")
         getUserInfo()
@@ -54,7 +54,7 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func checkFollowing() {
-        if friendList.contains(friendIDFromFriendFeed) {
+        if friendList.contains(friendID) {
             followUnfollowButton.setTitle("Following", for: .normal)
         }
     }
@@ -89,7 +89,7 @@ class UserCopyVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                         let user = userids[key]!
                         let email = user[firEmailNode] as! String
                         if email == self.userEmail {
-                            self.friendIDFromFriendFeed = (user as? String)!
+                            self.friendID = (user as? String)!
                             self.checkFollowing()
                         }
                     }
