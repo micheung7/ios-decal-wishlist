@@ -52,11 +52,15 @@ class FriendFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                 if let userids = snapshot.value as? [String:AnyObject] {
                     self.friendNames = []
                     self.recentItemList = []
+                    for _ in 1...self.friendList.count {
+                        self.friendNames.append("")
+                        self.recentItemList.append("")
+                    }
                     for key in userids.keys {
                         if self.friendList.contains(key) {
-                            self.friendNames.append((userids[key]![firUsernameNode] as? String)!)
+                            self.friendNames[self.friendList.index(of: key)!] = ((userids[key]![firUsernameNode] as? String)!)
                             let itemListNode = userids[key]![firItemListNode] as? [String]
-                            self.recentItemList.append(itemListNode![itemListNode!.count - 1])
+                            self.recentItemList[self.friendList.index(of: key)!] = (itemListNode![itemListNode!.count - 1])
                         }
                     }
                 }
@@ -70,9 +74,12 @@ class FriendFeedVC: UIViewController, UITableViewDataSource, UITableViewDelegate
             if snapshot.exists() {
                 if let itemids = snapshot.value as? [String:AnyObject] {
                     self.recentItemNames = []
+                    for _ in 1...self.friendList.count {
+                        self.recentItemNames.append("")
+                    }
                     for key in itemids.keys {
                         if self.recentItemList.contains(key) {
-                            self.recentItemNames.append((itemids[key]![firItemNameNode] as? String)!)
+                            self.recentItemNames[self.recentItemList.index(of: key)!] = ((itemids[key]![firItemNameNode] as? String)!)
                         }
                     }
                     DispatchQueue.main.async {
